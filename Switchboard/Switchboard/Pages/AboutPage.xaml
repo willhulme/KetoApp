@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<CarouselPage x:Class="Switchboard.Pages.AboutPage" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+<CarouselPage x:Class="Switchboard.Pages.AboutPage" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
     <ContentPage>
         <Grid>
@@ -8,10 +8,51 @@
                 <RowDefinition Height="100"/>
             </Grid.RowDefinitions>
 
-            <ContentView Grid.Row="0">
-                <Label Text="Profile 1" TextColor="Black" XAlign="Center" FontSize="Large" />
-                <Button Text="Add New Profile" Clicked="NewTapped"></Button>
+            <ContentView Grid.Row="0" Grid.ColumnSpan="2">
+                <Label Text="Your profile information is shown below. Please ensure it is correct." TextColor="Black" XAlign="Center" FontSize="Large" />
             </ContentView>
+
+            <ContentView Grid.Row="1" Grid.ColumnSpan="2">
+                <Image Source="About.png" />
+            </ContentView>
+
+            <ContentView Grid.Row="2" Grid.Column="0" VerticalOptions="Center">
+                <Label Text="First Name:" TextColor="Black" XAlign="Center" FontSize="Large"/>
+            </ContentView>
+
+            <ContentView Grid.Row="2" Grid.Column="1"  VerticalOptions="Center">
+                <Entry Placeholder="First Name" TextColor="Black" FontSize="Large" Keyboard="Text"/>
+            </ContentView>
+
+            <ContentView Grid.Row="3" Grid.Column="0" VerticalOptions="Center">
+                <Label Text="Second Name:" TextColor="Black" XAlign="Center" FontSize="Large"/>
+            </ContentView>
+
+            <ContentView Grid.Row="3" Grid.Column="1"  VerticalOptions="Center">
+                <Entry Placeholder="Second Name" TextColor="Black" FontSize="Large" Keyboard="Text"/>
+            </ContentView>
+
+            <ContentView Grid.Row="4" Grid.Column="0"  VerticalOptions="Center">
+                <Label Text="Date of Birth:" TextColor="Black" XAlign="Center" FontSize="Large"/>
+            </ContentView>
+
+            <ContentView Grid.Row="4" Grid.Column="1"  VerticalOptions="Center">
+                <StackLayout>
+                    <DatePicker VerticalOptions="CenterAndExpand" Date="{x:Static sys:DateTime.Now}" TextColor="Black">
+                        <DatePicker.Format>dd/MM/yyyy</DatePicker.Format>
+                    </DatePicker>
+                </StackLayout>
+            </ContentView>
+            
+            <ContentView Grid.Row="5" Grid.Column="0"  VerticalOptions="Center">
+                <Label Text="Insulin Pump:" TextColor="Black" XAlign="Center" FontSize="Large"/>
+            </ContentView>
+            
+            <ContentView Grid.Row="5" Grid.Column="1">
+                <Switch VerticalOptions="Center" HorizontalOptions="Center"/>
+            </ContentView>
+
+
 
         </Grid>
     </ContentPage>
