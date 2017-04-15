@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="Switchboard.Pages.KetoPage" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:Controls="clr-namespace:Switchboard;assembly=Switchboard">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <ContentView Grid.Row="0" Padding="10">
+            <Label Text="You may have established Ketoacidosis. Urgent hospital assessment is required." TextColor="Black" XAlign="Center" FontSize="Large" />
+        </ContentView>
+
+        <ContentView Grid.Row="1" Padding="20">
+            <StackLayout>
+                <Button Text="Emergency Contacts" FontSize="Large" BackgroundColor="Red" TextColor="White" Clicked="EmergencyTapped"></Button>
+            </StackLayout>
+        </ContentView>
+
+    </Grid>
+</ContentPage>

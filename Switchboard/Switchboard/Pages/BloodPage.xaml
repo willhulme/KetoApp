@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="Switchboard.Pages.BloodPage" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <Grid>
+        
+        <ContentView Grid.Row="0">
+            <Label Text="Please perform a blood ketone test." TextColor="Black" XAlign="Center" FontSize="Medium" />
+        </ContentView>
+        
+        <ContentView Grid.Row="1">
+            <Label Text="Is your reading greater than 1 mmol/L?" TextColor="Red" XAlign="Center" FontSize="Large" />
+        </ContentView>
+
+        <ContentView Grid.Row="2" Padding="10">
+            <StackLayout>
+                <Button Text="Yes" FontSize="Large" BackgroundColor="Red" TextColor="White" Clicked="YesTapped"></Button>
+                <Button Text="No" FontSize="Large" BackgroundColor="Gray" TextColor="White" Clicked="NoTapped"></Button>
+            </StackLayout>
+        </ContentView>
+        
+    </Grid>
+</ContentPage>

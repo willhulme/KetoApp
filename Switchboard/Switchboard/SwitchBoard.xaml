@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="Switchboard.MainSwitchboard" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:Controls="clr-namespace:Switchboard;assembly=Switchboard">
+
+    <Grid Padding="10" VerticalOptions="Center">
+
+        <Controls:SwitchboardButton Grid.Row="0" Grid.Column="0" Icon="Unwell.png" Label="I Feel Unwell">
+            <Controls:SwitchboardButton.GestureRecognizers>
+                <TapGestureRecognizer Tapped="UnwellTapped" />
+            </Controls:SwitchboardButton.GestureRecognizers>
+        </Controls:SwitchboardButton>
+
+        <Controls:SwitchboardButton Grid.Row="0" Grid.Column="1" Icon="Blood.png" Label="My Blood Glucose">
+            <Controls:SwitchboardButton.GestureRecognizers>
+                <TapGestureRecognizer Tapped="BloodTapped" />
+            </Controls:SwitchboardButton.GestureRecognizers>
+        </Controls:SwitchboardButton>
+
+        <Controls:SwitchboardButton Grid.Row="1" Grid.Column="0" Icon="About.png" Label="About Me">
+            <Controls:SwitchboardButton.GestureRecognizers>
+                <TapGestureRecognizer Tapped="AboutTapped" />
+            </Controls:SwitchboardButton.GestureRecognizers>
+        </Controls:SwitchboardButton>
+
+        <Controls:SwitchboardButton Grid.Row="1" Grid.Column="1" Icon="Help.png" Label="Help">
+            <Controls:SwitchboardButton.GestureRecognizers>
+                <TapGestureRecognizer Tapped="HelpTapped" />
+            </Controls:SwitchboardButton.GestureRecognizers>
+        </Controls:SwitchboardButton>
+
+    </Grid>
+</ContentPage>

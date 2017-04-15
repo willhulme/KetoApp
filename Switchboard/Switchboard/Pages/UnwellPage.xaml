@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="Switchboard.Pages.UnwellPage" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:Controls="clr-namespace:Switchboard;assembly=Switchboard">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        
+        <ContentView Grid.Row="0">
+            <Label Text="Are you experiencing any of these danger symptoms?" TextColor="Black" XAlign="Center" FontSize="Large" />
+        </ContentView>
+
+        <ContentView Grid.Row="1">
+            <StackLayout>
+                <Label Text="Persistent Vomiting" TextColor="Red" XAlign="Center" FontSize="Large"/>
+                <Label Text="Heavy and Rapid Breathing" TextColor="Red" XAlign="Center" FontSize="Large"/>
+                <Label Text="Abdominal Pain" TextColor="Red" XAlign="Center" FontSize="Large"/>
+                <Label Text="Moderate or Severe Dehydration" TextColor="Red" XAlign="Center" FontSize="Large"/>
+            </StackLayout>
+        </ContentView>
+
+        <ContentView Grid.Row="2" Padding="20">
+            <StackLayout>
+                <Button Text="Yes" FontSize="Large" BackgroundColor="Red" TextColor="White" Clicked="YesTapped"></Button>
+                <Button Text="No" FontSize="Large" BackgroundColor="Gray" TextColor="White" Clicked="NoTapped"></Button>
+            </StackLayout>
+        </ContentView>
+
+    </Grid>
+</ContentPage>

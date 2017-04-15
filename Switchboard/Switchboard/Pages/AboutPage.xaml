@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage x:Class="Switchboard.Pages.AboutPage" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <ContentPage>
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+            </Grid.RowDefinitions>
+
+            <ContentView Grid.Row="0">
+                <Label Text="Profile 1" TextColor="Black" XAlign="Center" FontSize="Large" />
+                <Button Text="Add New Profile" Clicked="NewTapped"></Button>
+            </ContentView>
+
+        </Grid>
+    </ContentPage>
+
+</CarouselPage>
