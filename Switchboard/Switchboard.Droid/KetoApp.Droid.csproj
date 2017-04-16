@@ -158,6 +158,9 @@
     <AndroidResource Include="Resources\drawable\Blood.png" />
     <AndroidResource Include="Resources\drawable\About.png" />
     <AndroidResource Include="Resources\drawable\Help.png" />
+    <AndroidResource Include="Resources\drawable\uod.png" />
+    <AndroidResource Include="Resources\drawable\diabetesuk.png" />
+    <AndroidResource Include="Resources\drawable\nhs.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Switchboard\KetoApp.csproj">

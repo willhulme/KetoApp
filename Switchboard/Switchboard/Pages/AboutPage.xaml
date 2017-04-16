@@ -43,16 +43,14 @@
                     </DatePicker>
                 </StackLayout>
             </ContentView>
-            
+
             <ContentView Grid.Row="5" Grid.Column="0"  VerticalOptions="Center">
                 <Label Text="Insulin Pump:" TextColor="Black" XAlign="Center" FontSize="Large"/>
             </ContentView>
-            
-            <ContentView Grid.Row="5" Grid.Column="1">
-                <Switch VerticalOptions="Center" HorizontalOptions="Center"/>
+
+            <ContentView Grid.Row="5" Grid.Column="1" HorizontalOptions="Center">
+                <Switch />
             </ContentView>
-
-
 
         </Grid>
     </ContentPage>

@@ -1,30 +1,43 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage x:Class="Switchboard.Pages.UnwellPage" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:Controls="clr-namespace:Switchboard;assembly=Switchboard">
-    <Grid>
+    <ScrollView Orientation="Vertical">
+        <Grid>
 
-        <Grid.RowDefinitions>
-            <RowDefinition Height="100"/>
-        </Grid.RowDefinitions>
-        
-        <ContentView Grid.Row="0">
-            <Label Text="Are you experiencing any of these danger symptoms?" TextColor="Black" XAlign="Center" FontSize="Large" />
-        </ContentView>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
 
-        <ContentView Grid.Row="1">
-            <StackLayout>
-                <Label Text="Persistent Vomiting" TextColor="Red" XAlign="Center" FontSize="Large"/>
-                <Label Text="Heavy and Rapid Breathing" TextColor="Red" XAlign="Center" FontSize="Large"/>
-                <Label Text="Abdominal Pain" TextColor="Red" XAlign="Center" FontSize="Large"/>
-                <Label Text="Moderate or Severe Dehydration" TextColor="Red" XAlign="Center" FontSize="Large"/>
-            </StackLayout>
-        </ContentView>
+            <ContentView Grid.Row="0" Padding="10">
+                <Label Text="Diabetic Ketoacidosis (DKA) is dangerous." TextColor="Black" XAlign="Center" FontSize="Large" />
+            </ContentView>
 
-        <ContentView Grid.Row="2" Padding="20">
-            <StackLayout>
-                <Button Text="Yes" FontSize="Large" BackgroundColor="Red" TextColor="White" Clicked="YesTapped"></Button>
-                <Button Text="No" FontSize="Large" BackgroundColor="Gray" TextColor="White" Clicked="NoTapped"></Button>
-            </StackLayout>
-        </ContentView>
+            <ContentView Grid.Row="1" Padding="10">
+                <Label Text="You should know how to prevent it. This app will tell you when to check for ketones - and what do to if you find them." TextColor="Black" XAlign="Center" FontSize="Medium" />
+            </ContentView>
 
-    </Grid>
+            <ContentView Grid.Row="2" BackgroundColor="Red" Padding="10">
+                <StackLayout>
+                    <Label Text="If you have any of the following:" TextColor="White" XAlign="Center" FontSize="Large" />
+                    <Label Text="• Persistent vomiting for 2-4 hours" TextColor="White" FontSize="Medium"/>
+                    <Label Text="• Heavy or rapid breathing" TextColor="White" FontSize="Medium"/>
+                    <Label Text="• Abdominal pain" TextColor="White" FontSize="Medium"/>
+                    <Label Text="• Moderate or severe dehydration" TextColor="White" FontSize="Medium"/>
+                    <Label Text="You may have established ketoacidosis. Urgent hospital assessment is required." TextColor="White" XAlign="Center" FontSize="Large" />
+                </StackLayout>
+            </ContentView>
+
+            <ContentView Grid.Row="3" Padding="10">
+                <Label Text="Tell a parent, partner, or supportive friend you are ill." TextColor="Black" XAlign="Center" FontSize="Large" />
+            </ContentView>
+
+            <ContentView Grid.Row="4" Padding="10">
+                <Button Text="Check for Ketones" FontSize="Large" BackgroundColor="Blue" TextColor="White" Clicked="KetonesTapped"></Button>
+            </ContentView>
+
+        </Grid>
+    </ScrollView>
 </ContentPage>

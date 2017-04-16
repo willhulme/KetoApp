@@ -8,15 +8,16 @@ using Xamarin.Forms;
 
 namespace Switchboard.Pages
 {
-    public partial class BloodPage : ContentPage
+    public partial class CheckPage : ContentPage
     {
-        public BloodPage()
+        public CheckPage()
         {
             InitializeComponent();
             this.Title = "KetoApp";
             this.BackgroundColor = Color.White;
         }
-        public async void NextTapped(object sender, EventArgs args)
+
+        public async void OKTapped(object sender, EventArgs args)
         {
             await Navigation.PushAsync(new MainSwitchboard());
         }

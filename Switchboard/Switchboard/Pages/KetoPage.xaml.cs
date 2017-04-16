@@ -16,9 +16,13 @@ namespace Switchboard.Pages
             this.Title = "KetoApp";
             this.BackgroundColor = Color.White;
         }
-        public async void EmergencyTapped(object sender, EventArgs args)
+        public async void YesTapped(object sender, EventArgs args)
         {
             await Navigation.PushAsync(new HelpPage());
+        }
+        public async void NoTapped(object sender, EventArgs args)
+        {
+            await Navigation.PushAsync(new CheckPage());
         }
     }
 }
