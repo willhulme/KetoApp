@@ -10,6 +10,7 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="50"/>
             </Grid.RowDefinitions>
 
@@ -23,7 +24,7 @@
                 </Controls:SwitchboardButton.GestureRecognizers>
             </Controls:SwitchboardButton>
 
-            <Controls:SwitchboardButton Grid.Row="1" Grid.Column="1" Icon="Blood.png" Label="My Blood Glucose">
+            <Controls:SwitchboardButton Grid.Row="1" Grid.Column="1" Icon="Blood.png" Label="Blood Glucose">
                 <Controls:SwitchboardButton.GestureRecognizers>
                     <TapGestureRecognizer Tapped="BloodTapped" />
                 </Controls:SwitchboardButton.GestureRecognizers>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="Switchboard.Pages.ExtraDosePage" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:Controls="clr-namespace:Switchboard;assembly=Switchboard">
+    <ScrollView Orientation="Vertical">
+        
+        <Grid VerticalOptions="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <ContentView Grid.Row="0" Padding="10">
+                <Label Text="Give yourself an extra dose of fast-acting insulin. (Pump users should give this by pen or syringe.)" TextColor="Black" XAlign="Center" FontSize="Large" />
+            </ContentView>
+
+            <ContentView Grid.Row="1" Padding="10">
+                <Label Text="To calculate the dose, add up all the units of insulin you usually take in a day, and divide by 6 (maximum single dose 15 units)." TextColor="Black" XAlign="Center" FontSize="Medium" />
+            </ContentView>
+
+            <ContentView Grid.Row="2" Padding="10">
+                <Label Text="If the blood glucose is still high 4 hours later, repeat the extra dose. Keep monitoring blood glucose and ketones - you can repeat the extra dose of insulin every 4 hours as necessary." TextColor="Black" XAlign="Center" FontSize="Medium" />
+            </ContentView>
+
+            <ContentView Grid.Row="3" Padding="10">
+                <Label Text="Contact your diabetes team if things have not settled within 12 hours." TextColor="Black" XAlign="Center" FontSize="Large" />
+            </ContentView>
+
+            <ContentView Grid.Row="4" Padding="10">
+                <Label Text="If you are getting worse, seek medical advice urgently (tell them you may have DKA)." TextColor="Red" XAlign="Center" FontSize="Large" />
+            </ContentView>
+
+            <ContentView Grid.Row="5" Padding="10">
+                <Button Text="OK" FontSize="Large" BackgroundColor="Blue" TextColor="White" Clicked="OKTapped"></Button>
+            </ContentView>
+
+        </Grid>
+    </ScrollView>
+</ContentPage>

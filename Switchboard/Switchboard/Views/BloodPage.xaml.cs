@@ -15,10 +15,20 @@ namespace Switchboard.Pages
             InitializeComponent();
             this.Title = "KetoApp";
             this.BackgroundColor = Color.White;
+            BindingContext = new ViewModels.Entries();
         }
+
         public async void NextTapped(object sender, EventArgs args)
         {
-            await Navigation.PushAsync(new MainSwitchboard());
+            Decimal mmolDec = 13;
+            if (mmolDec < 12)
+            {
+                await Navigation.PushAsync(new StarvePage());
+            }
+            else if (mmolDec >= 12)
+            {
+                await Navigation.PushAsync(new ExtraDosePage());
+            }
         }
     }
 }
