@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="Switchboard.Pages.StockPage" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:Controls="clr-namespace:Switchboard;assembly=Switchboard">
+    <ScrollView Orientation="Vertical">
+        
+        <Grid VerticalOptions="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <ContentView Grid.Row="0" Padding="10">
+                <Label Text="Keep a stock of ketone test strips - and make sure they are not out of date." TextColor="Black" XAlign="Center" FontSize="Large" />
+            </ContentView>
+
+            <ContentView Grid.Row="1" Padding="10">
+                <Label Text="Once opened, Ketostix should be replaced within 6 months." TextColor="Black" XAlign="Center" FontSize="Large" />
+            </ContentView>
+
+            <ContentView Grid.Row="2" Padding="10">
+                <Label Text="You should also have a supply of fast-acting insulin (Actrapid, Apidra, Humalog, Humalin S, or Novorapid)." TextColor="Red" XAlign="Center" FontSize="Large" />
+            </ContentView>
+
+            <ContentView Grid.Row="3" Padding="10">
+                <Button Text="OK" FontSize="Large" BackgroundColor="Blue" TextColor="White" Clicked="OKTapped"></Button>
+            </ContentView>
+
+        </Grid>
+    </ScrollView>
+</ContentPage>

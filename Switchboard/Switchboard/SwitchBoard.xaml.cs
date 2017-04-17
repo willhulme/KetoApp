@@ -24,7 +24,8 @@ namespace Switchboard
 
         public async void BloodTapped(object sender, EventArgs args)
         {
-            await Navigation.PushAsync(new BloodPage());
+            bool ketones = false;
+            await Navigation.PushAsync(new BloodPage(ketones));
         }
 
         public async void AboutTapped(object sender, EventArgs args)

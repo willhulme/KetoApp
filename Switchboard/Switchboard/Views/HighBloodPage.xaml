@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="Switchboard.Pages.HighBloodPage" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:Controls="clr-namespace:Switchboard;assembly=Switchboard">
+    <ScrollView Orientation="Vertical">
+        
+        <Grid VerticalOptions="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <ContentView Grid.Row="0" Padding="10" Grid.ColumnSpan="2">
+                <Label Text="Have your blood glucose readings been higher than 17 mmol/L on two separate before-meal tests, 4 hours apart?" TextColor="Black" XAlign="Center" FontSize="Large" />
+            </ContentView>
+
+            <ContentView Grid.Row="1" Grid.Column="0" Padding="20">
+                <Button Text="Yes" FontSize="Large" BackgroundColor="Red" TextColor="White" Clicked="YesTapped"></Button>
+            </ContentView>
+
+            <ContentView Grid.Row="1" Grid.Column="1" Padding="20">
+                <Button Text="No" FontSize="Large" BackgroundColor="Blue" TextColor="White" Clicked="NoTapped"></Button>
+            </ContentView>
+
+        </Grid>
+    </ScrollView>
+</ContentPage>

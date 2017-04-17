@@ -37,8 +37,17 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="Models\TaskModel.cs" />
+    <Compile Include="Views\RememberPage.xaml.cs">
+      <DependentUpon>RememberPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StockPage.xaml.cs">
+      <DependentUpon>StockPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ExtraDosePage.xaml.cs">
       <DependentUpon>ExtraDosePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HighBloodPage.xaml.cs">
+      <DependentUpon>HighBloodPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\StarvePage.xaml.cs">
       <DependentUpon>StarvePage.xaml</DependentUpon>
@@ -122,6 +131,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Mono.Android">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\MonoAndroid\v7.1\Mono.Android.dll</HintPath>
+    </Reference>
     <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.2.3.4.231\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Core.dll</HintPath>
       <Private>True</Private>
@@ -152,6 +164,24 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\ExtraDosePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\HighBloodPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\StockPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\RememberPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

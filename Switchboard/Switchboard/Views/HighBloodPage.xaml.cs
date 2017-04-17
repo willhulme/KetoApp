@@ -8,22 +8,22 @@ using Xamarin.Forms;
 
 namespace Switchboard.Pages
 {
-    public partial class KetoPage : ContentPage
+    public partial class HighBloodPage : ContentPage
     {
-        public KetoPage()
+        public HighBloodPage()
         {
             InitializeComponent();
             this.Title = "KetoApp";
             this.BackgroundColor = Color.White;
         }
+
         public async void YesTapped(object sender, EventArgs args)
         {
-            bool ketones = true;
-            await Navigation.PushAsync(new BloodPage(ketones));
+            await Navigation.PushAsync(new KetoPage());
         }
         public async void NoTapped(object sender, EventArgs args)
         {
-            await Navigation.PushAsync(new CheckPage());
+            await Navigation.PushAsync(new UnwellPage());
         }
     }
 }

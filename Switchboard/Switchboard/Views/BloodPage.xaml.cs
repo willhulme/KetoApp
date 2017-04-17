@@ -10,24 +10,38 @@ namespace Switchboard.Pages
 {
     public partial class BloodPage : ContentPage
     {
-        public BloodPage()
+        private bool KetoFlag = false;
+        public BloodPage(bool ketones)
         {
             InitializeComponent();
             this.Title = "KetoApp";
             this.BackgroundColor = Color.White;
-            BindingContext = new ViewModels.Entries();
+            KetoFlag = ketones;
         }
 
         public async void NextTapped(object sender, EventArgs args)
         {
-            Decimal mmolDec = 13;
-            if (mmolDec < 12)
+            var mmol = mmolString.Text;
+            Decimal mmolDec = Convert.ToDecimal(mmol);
+            if (mmolDec < 12 & !KetoFlag)
             {
+                KetoFlag = false;
+                await Navigation.PushAsync(new UnwellPage());
+            }
+            if (mmolDec < 12 & KetoFlag)
+            {
+                KetoFlag = false;
                 await Navigation.PushAsync(new StarvePage());
             }
-            else if (mmolDec >= 12)
+            if (mmolDec >= 12  & KetoFlag)
             {
+                KetoFlag = false;
                 await Navigation.PushAsync(new ExtraDosePage());
+            }
+            if (mmolDec >= 17 & !KetoFlag)
+            {
+                KetoFlag = false;
+                await Navigation.PushAsync(new HighBloodPage());
             }
         }
     }

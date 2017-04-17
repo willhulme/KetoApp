@@ -8,9 +8,9 @@ using Xamarin.Forms;
 
 namespace Switchboard.Pages
 {
-    public partial class CheckPage : ContentPage
+    public partial class StockPage : ContentPage
     {
-        public CheckPage()
+        public StockPage()
         {
             InitializeComponent();
             this.Title = "KetoApp";
@@ -19,7 +19,7 @@ namespace Switchboard.Pages
 
         public async void OKTapped(object sender, EventArgs args)
         {
-            await Navigation.PushAsync(new StockPage());
+            await Navigation.PushAsync(new RememberPage());
         }
     }
 }
