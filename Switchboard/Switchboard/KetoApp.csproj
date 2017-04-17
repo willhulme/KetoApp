@@ -37,8 +37,20 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="Models\TaskModel.cs" />
+    <Compile Include="Views\FoodPage.xaml.cs">
+      <DependentUpon>FoodPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TeethPage.xaml.cs">
+      <DependentUpon>TeethPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\RememberPage.xaml.cs">
       <DependentUpon>RememberPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NovorapidPage.xaml.cs">
+      <DependentUpon>NovorapidPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HypoPage.xaml.cs">
+      <DependentUpon>HypoPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\StockPage.xaml.cs">
       <DependentUpon>StockPage.xaml</DependentUpon>
@@ -182,6 +194,30 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\RememberPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\NovorapidPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\HypoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\TeethPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\FoodPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

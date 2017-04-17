@@ -9,6 +9,7 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
             <ContentView Grid.Row="0" Padding="10">
@@ -36,6 +37,10 @@
 
             <ContentView Grid.Row="4" Padding="10">
                 <Button Text="Check for Ketones" FontSize="Large" BackgroundColor="Blue" TextColor="White" Clicked="KetonesTapped"></Button>
+            </ContentView>
+
+            <ContentView Grid.Row="5" Padding="10">
+                <Button Text="I have danger signs" FontSize="Large" BackgroundColor="Red" TextColor="White" Clicked="DangerTapped"></Button>
             </ContentView>
 
         </Grid>

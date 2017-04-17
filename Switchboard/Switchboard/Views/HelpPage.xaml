@@ -1,40 +1,46 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage x:Class="Switchboard.Pages.HelpPage" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
-    <Grid>
+    <ScrollView Orientation="Vertical">
+        <Grid>
 
-        <Grid.RowDefinitions>
-            <RowDefinition Height="100"/>
-        </Grid.RowDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
 
-        <ContentView Grid.Row="0">
-            <Label Text="NHS Emergency" TextColor="Red" XAlign="Center" FontSize="Large" />
-        </ContentView>
+            <ContentView Grid.Row="0">
+                <Label Text="If you either have, or are at risk of, diabetic ketoacidosis (DKA) call your diabetes team (during working hours) or 999." TextColor="Red" XAlign="Center" FontSize="Large" />
+            </ContentView>
 
-        <ContentView Grid.Row="1" Padding="10">
-            <StackLayout>
-                <Button Text="999" FontSize="Large" BackgroundColor="Red" TextColor="White" Clicked="Button1_Clicked"></Button>
-            </StackLayout>
-        </ContentView>
+            <ContentView Grid.Row="1" Padding="10">
+                <StackLayout>
+                    <Button Text="CALL 999" FontSize="Large" BackgroundColor="Red" TextColor="White"></Button>
+                </StackLayout>
+            </ContentView>
 
-        <ContentView Grid.Row="2">
-            <Label Text="My Diabetologist" TextColor="Black" XAlign="Center" FontSize="Large" />
-        </ContentView>
+            <ContentView Grid.Row="2">
+                <Label Text="My Diabetologist (working hours)" TextColor="Black" XAlign="Center" FontSize="Large" />
+            </ContentView>
 
-        <ContentView Grid.Row="3" Padding="10">
-            <StackLayout>
-                <Button Text="000-000-000" FontSize="Large" BackgroundColor="Blue" TextColor="White"></Button>
-            </StackLayout>
-        </ContentView>
-        
-        <ContentView Grid.Row="4">
-            <Label Text="Local Hospital Ward" TextColor="Black" XAlign="Center" FontSize="Large" />
-        </ContentView>
+            <ContentView Grid.Row="3" Padding="10">
+                <StackLayout>
+                    <Button Text="000-000-000" FontSize="Large" BackgroundColor="Blue" TextColor="White"></Button>
+                </StackLayout>
+            </ContentView>
 
-        <ContentView Grid.Row="5" Padding="10">
-            <StackLayout>
-                <Button Text="111-111-111" FontSize="Large" BackgroundColor="Blue" TextColor="White"></Button>
-            </StackLayout>
-        </ContentView>
+            <ContentView Grid.Row="4">
+                <Label Text="Local Hospital Ward" TextColor="Black" XAlign="Center" FontSize="Large" />
+            </ContentView>
 
-    </Grid>
+            <ContentView Grid.Row="5" Padding="10">
+                <StackLayout>
+                    <Button Text="111-111-111" FontSize="Large" BackgroundColor="Blue" TextColor="White"></Button>
+                </StackLayout>
+            </ContentView>
+
+        </Grid>
+    </ScrollView>
 </ContentPage>

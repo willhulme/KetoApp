@@ -37,12 +37,16 @@
                 <Button Text="Next" FontSize="Large" BackgroundColor="Red" TextColor="White" Clicked="NextTapped" Command="{Binding mmolEntryCommand}"></Button>
             </ContentView>
 
-            <ContentView Grid.Row="4" Grid.ColumnSpan="2"  VerticalOptions="Center" BackgroundColor="Blue" Padding="10">
-                <StackLayout>
-                    <Label Text="Normal Blood Glucose Ranges" TextColor="White" XAlign="Center" FontSize="Large"/>
-                    <Label Text="• 2 hours before meals: 4.5–7.2 mmol/L" TextColor="White" FontSize="Medium"/>
-                    <Label Text="• 2 hours after meals: 10.0 mmol/L" TextColor="White" FontSize="Medium"/>
-                </StackLayout>
+            <ContentView Grid.Row="4" Grid.ColumnSpan="2" Padding="20">
+                <Button Text="Hypo Management Information" FontSize="Large" BackgroundColor="Blue" TextColor="White" Clicked="HypoTapped"></Button>
+            </ContentView>
+
+            <ContentView Grid.Row="5" Grid.ColumnSpan="2" Padding="20">
+                <Button Text="Food Information" FontSize="Large" BackgroundColor="Blue" TextColor="White" Clicked="FoodTapped"></Button>
+            </ContentView>
+
+            <ContentView Grid.Row="6" Grid.ColumnSpan="2" Padding="20">
+                <Button Text="Teeth Information" FontSize="Large" BackgroundColor="Blue" TextColor="White" Clicked="TeethTapped"></Button>
             </ContentView>
 
         </Grid>

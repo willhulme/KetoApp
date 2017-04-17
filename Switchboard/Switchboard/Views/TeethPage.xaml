@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="Switchboard.Pages.TeethPage" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:Controls="clr-namespace:Switchboard;assembly=Switchboard">
+    <ScrollView Orientation="Vertical">
+
+        <Grid VerticalOptions="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <ContentView Grid.Row="0" Padding="10">
+                <Label Text="Looking after your Teeth" TextColor="Black" XAlign="Center" FontSize="Large" />
+            </ContentView>
+
+            <ContentView Grid.Row="1" Padding="10">
+                <Label Text="Sugary foods or drinks are essential to treat hypoglycaemia quickly and safely.  However sugar can damage your teeth.  This can be reduced by: " TextColor="Black" XAlign="Center" FontSize="Large" />
+            </ContentView>
+
+            <ContentView Grid.Row="2" Padding="10">
+                <Label Text="• Drinking sugary drinks with a straw" TextColor="Black" FontSize="Large" />
+            </ContentView>
+
+            <ContentView Grid.Row="3" Padding="10">
+                <Label Text="• Rinsing your mouth out with water after treating your 'hypo'" TextColor="Black" FontSize="Large" />
+            </ContentView>
+
+            <ContentView Grid.Row="4" Padding="10">
+                <Label Text="• Chewing sugar free gum (for older children)" TextColor="Black" FontSize="Large" />
+            </ContentView>
+
+            <ContentView Grid.Row="5" Padding="10">
+                <Label Text="• Brushing your teeth twice a day" TextColor="Black" FontSize="Large" />
+            </ContentView>
+
+            <ContentView Grid.Row="6" Padding="10">
+                <Label Text="• Visiting your dentist regularly" TextColor="Black" FontSize="Large" />
+            </ContentView>
+
+            <ContentView Grid.Row="7" Padding="10">
+                <Button Text="OK" FontSize="Large" BackgroundColor="Blue" TextColor="White" Clicked="OKTapped"></Button>
+            </ContentView>
+
+        </Grid>
+    </ScrollView>
+</ContentPage>

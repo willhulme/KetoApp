@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="Switchboard.Pages.HypoPage" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:Controls="clr-namespace:Switchboard;assembly=Switchboard">
+    <ScrollView Orientation="Vertical">
+
+        <Grid VerticalOptions="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <ContentView Grid.Row="0" Padding="10">
+                <Label Text="Hypo Management in Diabetes" TextColor="Red" XAlign="Center" FontSize="Large" />
+            </ContentView>
+
+            <ContentView Grid.Row="1" Padding="10">
+                <Label Text="If a person's blood glucose reading is less than 4 mmols/L, treat with fast acting sugar immediately." TextColor="Black" XAlign="Center" FontSize="Large" />
+            </ContentView>
+
+            <ContentView Grid.Row="2" Padding="10">
+                <Label Text="If the person is uncooperative/drowsy but able to swallow use Glucose Gel instead of food or drink (quantities below)." TextColor="Black" XAlign="Center" FontSize="Large" />
+            </ContentView>
+
+            <ContentView Grid.Row="3" Padding="10">
+                <Label Text="IF UNRESPONSIVE SEEK IMMEDIATE MEDICAL ASSISTANCE AND OBTAIN GLYCAGON FROM DRUG FRIDGE/PREP AREA" TextColor="Red" XAlign="Center" FontSize="Large" />
+            </ContentView>
+
+            <ContentView Grid.Row="4" Padding="10">
+                <Label Text="Retest the blood sugar after 10 minutes and if still hypo treat again." TextColor="Black" XAlign="Center" FontSize="Large" />
+            </ContentView>
+
+            <ContentView Grid.Row="5" Padding="10">
+                <Label Text="Once the blood sugar is improving/symptoms resolving then give some long acting carbohydrate e.g. digestive biscuit, slice of toast etc or next meal if it is due within 1 hour." TextColor="Black" XAlign="Center" FontSize="Large" />
+            </ContentView>
+
+            <ContentView Grid.Row="6" Padding="10">
+                <Label Text="However if a patient is on insulin pump therapy, no long acting carbohydrate is required." TextColor="Red" XAlign="Center" FontSize="Large" />
+            </ContentView>
+
+            <ContentView Grid.Row="7" Padding="10">
+                <Button Text="OK" FontSize="Large" BackgroundColor="Blue" TextColor="White" Clicked="OKTapped"></Button>
+            </ContentView>
+
+        </Grid>
+    </ScrollView>
+</ContentPage>

@@ -8,13 +8,18 @@ using Xamarin.Forms;
 
 namespace Switchboard.Pages
 {
-    public partial class HelpPage : ContentPage
+    public partial class FoodPage : ContentPage
     {
-        public HelpPage()
+        public FoodPage()
         {
             InitializeComponent();
             this.Title = "KetoApp";
             this.BackgroundColor = Color.White;
+        }
+        
+        public async void OKTapped(object sender, EventArgs args)
+        {
+            await Navigation.PushAsync(new TeethPage());
         }
     }
 }
