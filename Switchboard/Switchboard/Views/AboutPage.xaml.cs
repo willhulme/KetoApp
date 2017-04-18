@@ -8,17 +8,13 @@ using Xamarin.Forms;
 
 namespace Switchboard.Pages
 {
-    public partial class AboutPage : CarouselPage
+    public partial class AboutPage : ContentPage
     {
         public AboutPage()
         {
             InitializeComponent();
             this.Title = "KetoApp";
             this.BackgroundColor = Color.White;
-        }
-        public async void NewTapped(object sender, EventArgs args)
-        {
-            this.Children.Add(new ProfilePage());
         }
     }
 }

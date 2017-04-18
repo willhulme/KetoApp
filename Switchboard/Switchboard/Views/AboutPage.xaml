@@ -1,9 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<CarouselPage x:Class="Switchboard.Pages.AboutPage" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+<ContentPage x:Class="Switchboard.Pages.AboutPage" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
-    <ContentPage>
+    <ScrollView Orientation="Vertical">
         <Grid>
-
             <Grid.RowDefinitions>
                 <RowDefinition Height="100"/>
             </Grid.RowDefinitions>
@@ -53,6 +52,5 @@
             </ContentView>
 
         </Grid>
-    </ContentPage>
-
-</CarouselPage>
+    </ScrollView>
+</ContentPage>
