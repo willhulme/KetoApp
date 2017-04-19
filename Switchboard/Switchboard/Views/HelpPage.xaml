@@ -1,11 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage x:Class="Switchboard.Pages.HelpPage" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
     <ScrollView Orientation="Vertical">
-        <Grid>
+        
+        <Grid VerticalOptions="Center" HorizontalOptions="Center">
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
+                <RowDefinition Height="50"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
@@ -22,20 +24,24 @@
             </ContentView>
 
             <ContentView Grid.Row="2">
-                <Label Text="My Diabetologist (working hours)" TextColor="Black" XAlign="Center" FontSize="Large" />
+                <Label Text="Working Hours (9AM - 5PM)" BackgroundColor="Black" TextColor="White" XAlign="Center" FontSize="Large" />
             </ContentView>
 
-            <ContentView Grid.Row="3" Padding="10">
+            <ContentView Grid.Row="3">
+                <Label Text="My Diabetes Team" TextColor="Black" XAlign="Center" FontSize="Large" />
+            </ContentView>
+
+            <ContentView Grid.Row="4" Padding="10">
                 <StackLayout>
                     <Button Text="000-000-000" FontSize="Large" BackgroundColor="Blue" TextColor="White"></Button>
                 </StackLayout>
             </ContentView>
 
-            <ContentView Grid.Row="4">
+            <ContentView Grid.Row="5">
                 <Label Text="Local Hospital Ward" TextColor="Black" XAlign="Center" FontSize="Large" />
             </ContentView>
 
-            <ContentView Grid.Row="5" Padding="10">
+            <ContentView Grid.Row="6" Padding="10">
                 <StackLayout>
                     <Button Text="111-111-111" FontSize="Large" BackgroundColor="Blue" TextColor="White"></Button>
                 </StackLayout>

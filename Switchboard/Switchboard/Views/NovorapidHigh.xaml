@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage x:Class="Switchboard.Pages.NovoRapidPage" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:Controls="clr-namespace:Switchboard;assembly=Switchboard">
+<ContentPage x:Class="Switchboard.Pages.NovorapidHigh" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:Controls="clr-namespace:Switchboard;assembly=Switchboard">
     <ScrollView Orientation="Vertical">
         
         <Grid VerticalOptions="Center">
@@ -11,23 +11,19 @@
             </Grid.RowDefinitions>
 
             <ContentView Grid.Row="0" Grid.ColumnSpan="2" Padding="10">
-                <Label Text="If you have not given a correction dose in the last 4 hours, give Novorapid [TDD / 6] " TextColor="Black" XAlign="Center" FontSize="Large" />
+                <Label Text="If you have not given a correction dose in the last 4 hours, give Novorapid [TDD / 6]" TextColor="Black" XAlign="Center" FontSize="Large" />
             </ContentView>
 
             <ContentView Grid.Row="1" Grid.ColumnSpan="2" Padding="10">
-                <Label Text="If you have not given a correction dose in the last 4 hours, give Novorapid [(glucose-8)/(100/TDD)]" TextColor="Black" XAlign="Center" FontSize="Large" />
-            </ContentView>
-
-            <ContentView Grid.Row="2" Grid.ColumnSpan="2" Padding="10">
                 <Label Text="While you are unwell and your blood and /or ketone levels are unstable, you should recheck every 4 hours. Would you like a reminder?" TextColor="Black" XAlign="Center" FontSize="Large" />
             </ContentView>
 
-            <ContentView Grid.Row="3" Grid.Column="0" Padding="20">
+            <ContentView Grid.Row="2" Grid.Column="0" Padding="20">
                 <Button Text="Yes" FontSize="Large" BackgroundColor="Blue" TextColor="White" Clicked="YesTapped"></Button>
             </ContentView>
 
-            <ContentView Grid.Row="3" Grid.Column="1" Padding="20">
-                <Button Text="No" FontSize="Large" BackgroundColor="Red" TextColor="White" Clicked="NoTapped"></Button>
+            <ContentView Grid.Row="2" Grid.Column="1" Padding="20">
+                <Button Text="OK" FontSize="Large" BackgroundColor="Blue" TextColor="White" Clicked="OKTapped"></Button>
             </ContentView>
             
         </Grid>

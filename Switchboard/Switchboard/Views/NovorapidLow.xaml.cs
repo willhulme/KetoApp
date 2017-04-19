@@ -8,9 +8,9 @@ using Xamarin.Forms;
 
 namespace Switchboard.Pages
 {
-    public partial class NovoRapidPage : ContentPage
+    public partial class NovorapidLow : ContentPage
     {
-        public NovoRapidPage()
+        public NovorapidLow()
         {
             InitializeComponent();
             this.Title = "KetoApp";
@@ -19,11 +19,11 @@ namespace Switchboard.Pages
 
         public async void YesTapped(object sender, EventArgs args)
         {
-            await Navigation.PushAsync(new MainSwitchboard());
+            //await Navigation.PushAsync(new ExtraDosePage());
         }
-        public async void NoTapped(object sender, EventArgs args)
+        public async void OKTapped(object sender, EventArgs args)
         {
-            await Navigation.PushAsync(new MainSwitchboard());
+            await Navigation.PushAsync(new CheckPage());
         }
     }
 }

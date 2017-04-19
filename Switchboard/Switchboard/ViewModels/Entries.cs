@@ -11,31 +11,24 @@ namespace Switchboard.ViewModels
 {
     public class Entries : INotifyPropertyChanged
     {
-        private string _mmolString;
-        public string mmolString
+        public event PropertyChangedEventHandler PropertyChanged;
+        public Models.TaskModel Model { get; set;}
+        public Entries()
         {
-            get
+            Model = new Models.TaskModel()
             {
-                return _mmolString;
-            }
-            set
-            {
-                _mmolString = value;
-                OnPropertyChanged();
-            }
+                mmolString = ""
+            };
         }
-
         public Command mmolEntryCommand {
             get {
                 return new Command(() =>
                 {
-                    mmolString = mmolString;
+                    Model.mmolString = Model.mmolString;
+                    OnPropertyChanged();
                 });
             }
         }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

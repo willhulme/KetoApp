@@ -10,6 +10,8 @@ namespace Switchboard.Pages
 {
     public partial class KetoPage : ContentPage
     {
+        private bool ketones;
+        private bool start;
         public KetoPage()
         {
             InitializeComponent();
@@ -18,12 +20,15 @@ namespace Switchboard.Pages
         }
         public async void YesTapped(object sender, EventArgs args)
         {
-            bool ketones = true;
-            await Navigation.PushAsync(new BloodPage(ketones));
+            ketones = true;
+            start = false;
+            await Navigation.PushAsync(new BloodPage(ketones, start));
         }
         public async void NoTapped(object sender, EventArgs args)
         {
-            await Navigation.PushAsync(new CheckPage());
+            ketones = false;
+            start = false;
+            await Navigation.PushAsync(new BloodPage(ketones, start));
         }
     }
 }

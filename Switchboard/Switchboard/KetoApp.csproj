@@ -40,14 +40,17 @@
     <Compile Include="Views\FoodPage.xaml.cs">
       <DependentUpon>FoodPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\NovorapidLow.xaml.cs">
+      <DependentUpon>NovorapidLow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\TeethPage.xaml.cs">
       <DependentUpon>TeethPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\RememberPage.xaml.cs">
       <DependentUpon>RememberPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\NovorapidPage.xaml.cs">
-      <DependentUpon>NovorapidPage.xaml</DependentUpon>
+    <Compile Include="Views\NovorapidHigh.xaml.cs">
+      <DependentUpon>NovorapidHigh.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\HypoPage.xaml.cs">
       <DependentUpon>HypoPage.xaml</DependentUpon>
@@ -190,7 +193,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Views\NovorapidPage.xaml">
+    <EmbeddedResource Include="Views\NovorapidHigh.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -209,6 +212,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\FoodPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\NovorapidLow.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

@@ -10,6 +10,8 @@ namespace Switchboard
 {
     public partial class MainSwitchboard : ContentPage
     {
+        private bool ketones;
+        private bool start;
         public MainSwitchboard()
         {
             InitializeComponent();
@@ -24,8 +26,9 @@ namespace Switchboard
 
         public async void BloodTapped(object sender, EventArgs args)
         {
-            bool ketones = false;
-            await Navigation.PushAsync(new BloodPage(ketones));
+            ketones = false;
+            start = true;
+            await Navigation.PushAsync(new BloodPage(ketones, start));
         }
 
         public async void AboutTapped(object sender, EventArgs args)

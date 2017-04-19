@@ -7,34 +7,36 @@
     </ContentPage.BindingContext>
     
     <ScrollView Orientation="Vertical">
-        <Grid VerticalOptions="Center">
+        <Grid>
 
             <Grid.RowDefinitions>
-                <RowDefinition Height="75"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
                 <RowDefinition Height="Auto"/>
-                <RowDefinition Height="120"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
             <ContentView Grid.Row="0" Grid.ColumnSpan="2">
-                <Label Text="Please perform a Blood Glucose test." TextColor="Black" XAlign="Center" FontSize="Large" />
-            </ContentView>
-
-            <ContentView Grid.Row="1" Grid.ColumnSpan="2">
                 <Label Text="What is your current blood glucose level?" TextColor="Black" XAlign="Center" FontSize="Large" />
             </ContentView>
 
-            <ContentView Grid.Row="2" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center">
-                <Entry Text="{Binding mmolString}" x:Name="mmolString" Placeholder="0.00" TextColor="Black" FontSize="Large" Keyboard="Numeric" Grid.Row="1" Grid.Column="0"/>
+            <ContentView Grid.Row="1" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center">
+                <Entry Text="{Binding Model.mmolString}" x:Name="mmolString" Placeholder="0.00" TextColor="Black" FontSize="Large" Keyboard="Numeric" Grid.Row="1" Grid.Column="0"/>
             </ContentView>
 
-            <ContentView Grid.Row="2" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center">
+            <ContentView Grid.Row="1" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center">
                 <Label Text="mmol/L" TextColor="Black" XAlign="Center" FontSize="Large" Grid.Row="1" Grid.Column="1"/>
             </ContentView>
 
-            <ContentView Grid.Row="3" Grid.ColumnSpan="2" Padding="20">
+            <ContentView Grid.Row="2" Grid.ColumnSpan="2" Padding="20">
                 <Button Text="Next" FontSize="Large" BackgroundColor="Red" TextColor="White" Clicked="NextTapped" Command="{Binding mmolEntryCommand}"></Button>
+            </ContentView>
+
+            <ContentView Grid.Row="3" Grid.ColumnSpan="2">
+                <Label Text="Additional Information" TextColor="White" BackgroundColor="Black" XAlign="Center" FontSize="Large" />
             </ContentView>
 
             <ContentView Grid.Row="4" Grid.ColumnSpan="2" Padding="20">

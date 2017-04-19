@@ -10,40 +10,44 @@ namespace Switchboard.Pages
 {
     public partial class BloodPage : ContentPage
     {
-        private bool KetoFlag = false;
-        public BloodPage(bool ketones)
+        private bool KetoFlag;
+        private bool StartFlag;
+        public BloodPage(bool ketones, bool start)
         {
             InitializeComponent();
+            BindingContext = new ViewModels.Entries();
             this.Title = "KetoApp";
             this.BackgroundColor = Color.White;
             KetoFlag = ketones;
+            StartFlag = start;
         }
 
         public async void NextTapped(object sender, EventArgs args)
         {
             var mmol = mmolString.Text;
             Decimal mmolDec = Convert.ToDecimal(mmol);
-            if (mmolDec < 12 & !KetoFlag)
+            if (mmolDec >= 12 & StartFlag)
             {
                 KetoFlag = false;
-                await Navigation.PushAsync(new HypoPage());
+                StartFlag = false;
+                await Navigation.PushAsync(new HighBloodPage());
             }
-            if (mmolDec < 12 & KetoFlag)
+            else if (mmolDec < 12 & !KetoFlag)
+            {
+                KetoFlag = false;
+                await Navigation.PushAsync(new NovorapidLow());
+            }
+            else if (mmolDec < 12 & KetoFlag)
             {
                 KetoFlag = false;
                 await Navigation.PushAsync(new StarvePage());
             }
-            if (mmolDec >= 12 & KetoFlag)
+            else if(mmolDec >= 12 & KetoFlag)
             {
                 KetoFlag = false;
-                await Navigation.PushAsync(new ExtraDosePage());
+                await Navigation.PushAsync(new NovorapidHigh());
             }
-            if (mmolDec >= 12 & !KetoFlag)
-            {
-                KetoFlag = false;
-                await Navigation.PushAsync(new NovoRapidPage());
-            }
-            if (mmolDec >= 17 & !KetoFlag)
+            else if (mmolDec >= 12 & !KetoFlag)
             {
                 KetoFlag = false;
                 await Navigation.PushAsync(new HighBloodPage());
