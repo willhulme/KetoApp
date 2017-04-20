@@ -18,27 +18,33 @@ namespace KetoApp
             this.Title = "KetoApp";
             this.BackgroundColor = Color.White;
         }
-
         public async void UnwellTapped (object sender, EventArgs args)
         {
             await Navigation.PushAsync(new UnwellPage());
         }
-
         public async void BloodTapped(object sender, EventArgs args)
         {
             ketones = false;
             start = true;
             await Navigation.PushAsync(new BloodPage(ketones, start));
         }
-
         public async void AboutTapped(object sender, EventArgs args)
         {
             //await Navigation.PushAsync(new SQLite.SQLiteAboutPage().GetAboutPage());
         }
-
-        public async void HelpTapped(object sender, EventArgs args)
+        public async void FoodTapped(object sender, EventArgs args)
         {
-            await Navigation.PushAsync(new HelpPage());
+
+            await Navigation.PushAsync(new FoodPage());
+        }
+        public async void TeethTapped(object sender, EventArgs args)
+        {
+            await Navigation.PushAsync(new TeethPage());
+        }
+        public async void KetoTapped(object sender, EventArgs args)
+        {
+            await Navigation.PushAsync(new CreditsPage());
+
         }
     }
 }

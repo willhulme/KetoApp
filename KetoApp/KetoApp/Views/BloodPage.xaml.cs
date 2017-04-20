@@ -35,7 +35,7 @@ namespace KetoApp.Pages
             else if (mmolDec < 12 & !KetoFlag)
             {
                 KetoFlag = false;
-                await Navigation.PushAsync(new NovorapidLow());
+                await Navigation.PushAsync(new HypoPage());
             }
             else if (mmolDec < 12 & KetoFlag)
             {
@@ -50,20 +50,8 @@ namespace KetoApp.Pages
             else if (mmolDec >= 12 & !KetoFlag)
             {
                 KetoFlag = false;
-                await Navigation.PushAsync(new HighBloodPage());
+                await Navigation.PushAsync(new NovorapidLow());
             }
-        }
-        public async void HypoTapped(object sender, EventArgs args)
-        {
-            await Navigation.PushAsync(new HypoPage());
-        }
-        public async void FoodTapped(object sender, EventArgs args)
-        {
-            await Navigation.PushAsync(new FoodPage());
-        }
-        public async void TeethTapped(object sender, EventArgs args)
-        {
-            await Navigation.PushAsync(new TeethPage());
         }
     }
 }

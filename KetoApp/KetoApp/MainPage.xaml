@@ -7,10 +7,9 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="75"/>
                 <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="200"/>
                 <RowDefinition Height="50"/>
             </Grid.RowDefinitions>
 
@@ -18,44 +17,48 @@
                 <Label Text="This guidance does not replace advice from your diabetes team." TextColor="Black" XAlign="Center" FontSize="Large" />
             </ContentView>
 
-            <Controls:IconButton Grid.Row="1" Grid.Column="0" Icon="Unwell.png" Label="I Feel Unwell">
+            <ContentView Grid.Row="1" Grid.ColumnSpan="2" Padding="10">
+                <Image Source="ketoappbanner.png" />
+            </ContentView>
+
+            <Controls:IconButton Grid.Row="2" Grid.Column="0" Icon="sick.png" Label="I Feel Unwell" Padding="10">
                 <Controls:IconButton.GestureRecognizers>
                     <TapGestureRecognizer Tapped="UnwellTapped" />
                 </Controls:IconButton.GestureRecognizers>
             </Controls:IconButton>
 
-            <Controls:IconButton Grid.Row="1" Grid.Column="1" Icon="Blood.png" Label="Blood Glucose">
+            <Controls:IconButton Grid.Row="2" Grid.Column="1" Icon="happy.png" Label="Blood Glucose" Padding="10">
                 <Controls:IconButton.GestureRecognizers>
                     <TapGestureRecognizer Tapped="BloodTapped" />
                 </Controls:IconButton.GestureRecognizers>
             </Controls:IconButton>
 
-            <Controls:IconButton Grid.Row="2" Grid.Column="0" Icon="About.png" Label="About Me">
+            <Controls:IconButton Grid.Row="3" Grid.Column="0" Icon="aboutme.png" Label="About Me" Padding="10">
                 <Controls:IconButton.GestureRecognizers>
                     <TapGestureRecognizer Tapped="AboutTapped" />
                 </Controls:IconButton.GestureRecognizers>
             </Controls:IconButton>
 
-            <Controls:IconButton Grid.Row="2" Grid.Column="1" Icon="Help.png" Label="Help">
+            <Controls:IconButton Grid.Row="3" Grid.Column="1" Icon="food.png" Label="Hypo Food" Padding="10">
                 <Controls:IconButton.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="HelpTapped" />
+                    <TapGestureRecognizer Tapped="FoodTapped" />
                 </Controls:IconButton.GestureRecognizers>
             </Controls:IconButton>
 
-            <ContentView Grid.Row="3" Grid.ColumnSpan="2" Padding="30">
-                <Image Source="diabetesuk.png" />
-            </ContentView>
+            <Controls:IconButton Grid.Row="4" Grid.Column="0" Icon="teeth.png" Label="My Teeth" Padding="10">
+                <Controls:IconButton.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TeethTapped" />
+                </Controls:IconButton.GestureRecognizers>
+            </Controls:IconButton>
 
-            <ContentView Grid.Row="4" Grid.ColumnSpan="2" Padding="30">
-                <Image Source="nhs.png" />
-            </ContentView>
+            <Controls:IconButton Grid.Row="4" Grid.Column="1" Icon="icon.png" Label="The KetoApp" Padding="10">
+                <Controls:IconButton.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="KetoTapped" />
+                </Controls:IconButton.GestureRecognizers>
+            </Controls:IconButton>
 
-            <ContentView Grid.Row="5" Grid.ColumnSpan="2" Padding="30">
-                <Image Source="uod.png" />
-            </ContentView>
-
-            <ContentView Grid.Row="6" Grid.ColumnSpan="2">
-                <Label Text="© NHS Highland 2017" TextColor="Black" XAlign="Center"/>
+            <ContentView Grid.Row="5" Grid.ColumnSpan="2" VerticalOptions="Center">
+                <Label Text="© NHS Highland 2017" TextColor="Black" XAlign="Center" FontSize="Large" />
             </ContentView>
 
         </Grid>

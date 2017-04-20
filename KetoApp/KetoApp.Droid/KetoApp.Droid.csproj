@@ -180,16 +180,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\AndroidManifest.xml" />
-    <AndroidResource Include="Resources\drawable\Unwell.png" />
-    <AndroidResource Include="Resources\drawable\Blood.png" />
-    <AndroidResource Include="Resources\drawable\About.png" />
-    <AndroidResource Include="Resources\drawable\Help.png" />
     <AndroidResource Include="Resources\drawable\uod.png" />
     <AndroidResource Include="Resources\drawable\diabetesuk.png" />
     <AndroidResource Include="Resources\drawable\nhs.png" />
+    <AndroidResource Include="Resources\drawable\aboutme.png" />
+    <AndroidResource Include="Resources\drawable\food.png" />
+    <AndroidResource Include="Resources\drawable\happy.png" />
+    <AndroidResource Include="Resources\drawable\ketoappbanner.png" />
+    <AndroidResource Include="Resources\drawable\sick.png" />
+    <AndroidResource Include="Resources\drawable\teeth.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Switchboard\KetoApp.csproj">
+    <ProjectReference Include="..\KetoApp\KetoApp.csproj">
       <Name>KetoApp</Name>
       <Project>{B7C7D935-D7A5-4E9B-9537-5E6A934140A6}</Project>
     </ProjectReference>

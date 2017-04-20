@@ -8,15 +8,14 @@ using Xamarin.Forms;
 
 namespace KetoApp.Pages
 {
-    public partial class TeethPage : ContentPage
+    public partial class CreditsPage : ContentPage
     {
-        public TeethPage()
+        public CreditsPage()
         {
             InitializeComponent();
             this.Title = "KetoApp";
             this.BackgroundColor = Color.White;
         }
-        
         public async void OKTapped(object sender, EventArgs args)
         {
             await Navigation.PopToRootAsync();

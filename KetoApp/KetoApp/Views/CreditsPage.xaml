@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="KetoApp.Pages.CreditsPage" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:Controls="clr-namespace:KetoApp;assembly=KetoApp">
+    <ScrollView Orientation="Vertical">
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <ContentView Grid.Row="0" Padding="30">
+                <Image Source="diabetesuk.png" />
+            </ContentView>
+
+            <ContentView Grid.Row="1" Padding="30">
+                <Image Source="nhs.png" />
+            </ContentView>
+
+            <ContentView Grid.Row="2" Padding="30">
+                <Image Source="uod.png" />
+            </ContentView>
+
+            <ContentView Grid.Row="3">
+                <Label Text="Icon(s) made by Freepik from www.flaticon.com" TextColor="Black" XAlign="Center" FontSize="Large" />
+            </ContentView>
+
+            <ContentView Grid.Row="4" Padding="10" VerticalOptions="Center">
+                <Button Text="OK" FontSize="Large" BackgroundColor="Blue" TextColor="White" Clicked="OKTapped"></Button>
+            </ContentView>
+
+        </Grid>
+    </ScrollView>
+</ContentPage>

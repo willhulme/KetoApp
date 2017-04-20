@@ -18,7 +18,7 @@ namespace KetoApp.Pages
         }
         public async void OKTapped(object sender, EventArgs args)
         {
-                await Navigation.PushAsync(new MainPage());
+            await Navigation.PopToRootAsync();
         }
     }
 }

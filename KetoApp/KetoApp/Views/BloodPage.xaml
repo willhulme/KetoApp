@@ -24,31 +24,15 @@
             </ContentView>
 
             <ContentView Grid.Row="1" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center">
-                <Entry Text="{Binding Model.mmolString}" x:Name="mmolString" Placeholder="0.00" TextColor="Black" FontSize="Large" Keyboard="Numeric" Grid.Row="1" Grid.Column="0"/>
+                <Entry Text="{Binding Model.mmolString}" x:Name="mmolString" Placeholder="0.00" TextColor="Black" FontSize="26" Keyboard="Numeric" Grid.Row="1" Grid.Column="0"/>
             </ContentView>
 
             <ContentView Grid.Row="1" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center">
-                <Label Text="mmol/L" TextColor="Black" XAlign="Center" FontSize="Large" Grid.Row="1" Grid.Column="1"/>
+                <Label Text="mmol/L" TextColor="Black" XAlign="Center" FontSize="26" Grid.Row="1" Grid.Column="1"/>
             </ContentView>
 
             <ContentView Grid.Row="2" Grid.ColumnSpan="2" Padding="20">
                 <Button Text="Next" FontSize="Large" BackgroundColor="Red" TextColor="White" Clicked="NextTapped" Command="{Binding mmolEntryCommand}"></Button>
-            </ContentView>
-
-            <ContentView Grid.Row="3" Grid.ColumnSpan="2">
-                <Label Text="Additional Information" TextColor="White" BackgroundColor="Black" XAlign="Center" FontSize="Large" />
-            </ContentView>
-
-            <ContentView Grid.Row="4" Grid.ColumnSpan="2" Padding="20">
-                <Button Text="Hypo Management Information" FontSize="Large" BackgroundColor="Blue" TextColor="White" Clicked="HypoTapped"></Button>
-            </ContentView>
-
-            <ContentView Grid.Row="5" Grid.ColumnSpan="2" Padding="20">
-                <Button Text="Food Information" FontSize="Large" BackgroundColor="Blue" TextColor="White" Clicked="FoodTapped"></Button>
-            </ContentView>
-
-            <ContentView Grid.Row="6" Grid.ColumnSpan="2" Padding="20">
-                <Button Text="Teeth Information" FontSize="Large" BackgroundColor="Blue" TextColor="White" Clicked="TeethTapped"></Button>
             </ContentView>
 
         </Grid>

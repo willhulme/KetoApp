@@ -102,7 +102,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Switchboard\KetoApp.csproj">
+    <ProjectReference Include="..\KetoApp\KetoApp.csproj">
       <Name>KetoApp</Name>
       <Project>{B7C7D935-D7A5-4E9B-9537-5E6A934140A6}</Project>
     </ProjectReference>
@@ -170,18 +170,6 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Unwell.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Help.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Blood.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\About.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\uod.png" />
   </ItemGroup>
   <ItemGroup>
@@ -189,6 +177,27 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\nhs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ketoappbanner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\sick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\teeth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\food.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\happy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\aboutme.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.3.4.231\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.4.231\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
