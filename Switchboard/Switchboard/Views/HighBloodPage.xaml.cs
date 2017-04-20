@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 
-namespace Switchboard.Pages
+namespace KetoApp.Pages
 {
     public partial class HighBloodPage : ContentPage
     {

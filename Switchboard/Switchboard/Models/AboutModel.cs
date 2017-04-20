@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Switchboard.Models
+namespace KetoApp.Models
 {
     public class AboutModel
     {

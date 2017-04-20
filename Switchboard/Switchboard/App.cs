@@ -5,14 +5,14 @@ using System.Text;
 
 using Xamarin.Forms;
 
-namespace Switchboard
+namespace KetoApp
 {
     public class App : Application
     {
         public App()
         {
             // The root page of your application
-            MainPage = new NavigationPage(new MainSwitchboard());
+            MainPage = new NavigationPage(new MainPage());
         }
         protected override void OnStart()
         {

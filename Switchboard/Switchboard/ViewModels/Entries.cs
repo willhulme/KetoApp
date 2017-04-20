@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace Switchboard.ViewModels
+namespace KetoApp.ViewModels
 {
     public class Entries : INotifyPropertyChanged
     {

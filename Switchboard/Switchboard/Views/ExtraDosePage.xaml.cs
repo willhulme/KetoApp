@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 
-namespace Switchboard.Pages
+namespace KetoApp.Pages
 {
     public partial class ExtraDosePage : ContentPage
     {
@@ -18,7 +18,7 @@ namespace Switchboard.Pages
         }
         public async void OKTapped(object sender, EventArgs args)
         {
-                await Navigation.PushAsync(new MainSwitchboard());
+                await Navigation.PushAsync(new MainPage());
         }
     }
 }

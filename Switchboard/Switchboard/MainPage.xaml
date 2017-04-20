@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage x:Class="Switchboard.MainSwitchboard" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:Controls="clr-namespace:Switchboard;assembly=Switchboard">
+<ContentPage x:Class="KetoApp.MainPage" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:Controls="clr-namespace:KetoApp;assembly=KetoApp">
 
     <ScrollView Orientation="Vertical">
         <Grid>
@@ -18,29 +18,29 @@
                 <Label Text="This guidance does not replace advice from your diabetes team." TextColor="Black" XAlign="Center" FontSize="Large" />
             </ContentView>
 
-            <Controls:SwitchboardButton Grid.Row="1" Grid.Column="0" Icon="Unwell.png" Label="I Feel Unwell">
-                <Controls:SwitchboardButton.GestureRecognizers>
+            <Controls:IconButton Grid.Row="1" Grid.Column="0" Icon="Unwell.png" Label="I Feel Unwell">
+                <Controls:IconButton.GestureRecognizers>
                     <TapGestureRecognizer Tapped="UnwellTapped" />
-                </Controls:SwitchboardButton.GestureRecognizers>
-            </Controls:SwitchboardButton>
+                </Controls:IconButton.GestureRecognizers>
+            </Controls:IconButton>
 
-            <Controls:SwitchboardButton Grid.Row="1" Grid.Column="1" Icon="Blood.png" Label="Blood Glucose">
-                <Controls:SwitchboardButton.GestureRecognizers>
+            <Controls:IconButton Grid.Row="1" Grid.Column="1" Icon="Blood.png" Label="Blood Glucose">
+                <Controls:IconButton.GestureRecognizers>
                     <TapGestureRecognizer Tapped="BloodTapped" />
-                </Controls:SwitchboardButton.GestureRecognizers>
-            </Controls:SwitchboardButton>
+                </Controls:IconButton.GestureRecognizers>
+            </Controls:IconButton>
 
-            <Controls:SwitchboardButton Grid.Row="2" Grid.Column="0" Icon="About.png" Label="About Me">
-                <Controls:SwitchboardButton.GestureRecognizers>
+            <Controls:IconButton Grid.Row="2" Grid.Column="0" Icon="About.png" Label="About Me">
+                <Controls:IconButton.GestureRecognizers>
                     <TapGestureRecognizer Tapped="AboutTapped" />
-                </Controls:SwitchboardButton.GestureRecognizers>
-            </Controls:SwitchboardButton>
+                </Controls:IconButton.GestureRecognizers>
+            </Controls:IconButton>
 
-            <Controls:SwitchboardButton Grid.Row="2" Grid.Column="1" Icon="Help.png" Label="Help">
-                <Controls:SwitchboardButton.GestureRecognizers>
+            <Controls:IconButton Grid.Row="2" Grid.Column="1" Icon="Help.png" Label="Help">
+                <Controls:IconButton.GestureRecognizers>
                     <TapGestureRecognizer Tapped="HelpTapped" />
-                </Controls:SwitchboardButton.GestureRecognizers>
-            </Controls:SwitchboardButton>
+                </Controls:IconButton.GestureRecognizers>
+            </Controls:IconButton>
 
             <ContentView Grid.Row="3" Grid.ColumnSpan="2" Padding="30">
                 <Image Source="diabetesuk.png" />

@@ -7,17 +7,16 @@ using SQLite;
 
 using Xamarin.Forms;
 
-namespace Switchboard.Pages
+namespace KetoApp.Pages
 {
-    
     public partial class AboutPage : ContentPage
     {
+
         public AboutPage()
         {
             InitializeComponent();
             this.Title = "KetoApp";
             this.BackgroundColor = Color.White;
-            
         }
     }
 }

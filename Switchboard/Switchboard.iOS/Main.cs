@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace Switchboard.iOS
+namespace KetoApp.iOS
 {
     public class Application
     {

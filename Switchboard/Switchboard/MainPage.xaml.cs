@@ -1,4 +1,4 @@
-﻿using Switchboard.Pages;
+﻿using KetoApp.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,13 +6,13 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace Switchboard
+namespace KetoApp
 {
-    public partial class MainSwitchboard : ContentPage
+    public partial class MainPage : ContentPage
     {
         private bool ketones;
         private bool start;
-        public MainSwitchboard()
+        public MainPage()
         {
             InitializeComponent();
             this.Title = "KetoApp";
@@ -33,7 +33,7 @@ namespace Switchboard
 
         public async void AboutTapped(object sender, EventArgs args)
         {
-            await Navigation.PushAsync(new AboutPage());
+            //await Navigation.PushAsync(new SQLite.SQLiteAboutPage().GetAboutPage());
         }
 
         public async void HelpTapped(object sender, EventArgs args)

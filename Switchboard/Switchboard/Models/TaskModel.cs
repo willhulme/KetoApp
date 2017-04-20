@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Switchboard.Models
+namespace KetoApp.Models
 {
     public class TaskModel
     {
