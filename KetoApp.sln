@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KetoApp", "Switchboard\Switchboard\KetoApp.csproj", "{B7C7D935-D7A5-4E9B-9537-5E6A934140A6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KetoApp", "KetoApp\KetoApp\KetoApp.csproj", "{B7C7D935-D7A5-4E9B-9537-5E6A934140A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KetoApp.iOS", "Switchboard\Switchboard.iOS\KetoApp.iOS.csproj", "{D402F925-0D40-4D4A-AC27-6FBD2AA56000}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KetoApp.iOS", "KetoApp\KetoApp.iOS\KetoApp.iOS.csproj", "{D402F925-0D40-4D4A-AC27-6FBD2AA56000}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KetoApp.Droid", "Switchboard\Switchboard.Droid\KetoApp.Droid.csproj", "{780D496E-8F00-4EA3-943C-37778DE2741A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KetoApp.Droid", "KetoApp\KetoApp.Droid\KetoApp.Droid.csproj", "{780D496E-8F00-4EA3-943C-37778DE2741A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
