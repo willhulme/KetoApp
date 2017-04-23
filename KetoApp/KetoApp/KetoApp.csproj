@@ -40,6 +40,7 @@
     <Compile Include="Models\TaskModel.cs" />
     <Compile Include="SQLite\SQLiteAboutPage.cs" />
     <Compile Include="SQLite\ISQLite.cs" />
+    <Compile Include="ViewModels\Profile.cs" />
     <Compile Include="Views\FoodPage.xaml.cs">
       <DependentUpon>FoodPage.xaml</DependentUpon>
     </Compile>

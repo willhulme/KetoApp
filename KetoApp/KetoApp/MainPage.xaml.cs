@@ -17,8 +17,9 @@ namespace KetoApp
             InitializeComponent();
             this.Title = "KetoApp";
             this.BackgroundColor = Color.White;
+            BindingContext = new ViewModels.Profile();
         }
-        public async void UnwellTapped (object sender, EventArgs args)
+        public async void UnwellTapped(object sender, EventArgs args)
         {
             await Navigation.PushAsync(new UnwellPage());
         }
@@ -30,11 +31,10 @@ namespace KetoApp
         }
         public async void AboutTapped(object sender, EventArgs args)
         {
-            //await Navigation.PushAsync(new SQLite.SQLiteAboutPage().GetAboutPage());
+            await Navigation.PushAsync(new AboutPage());
         }
         public async void FoodTapped(object sender, EventArgs args)
         {
-
             await Navigation.PushAsync(new FoodPage());
         }
         public async void TeethTapped(object sender, EventArgs args)
@@ -44,7 +44,6 @@ namespace KetoApp
         public async void KetoTapped(object sender, EventArgs args)
         {
             await Navigation.PushAsync(new CreditsPage());
-
         }
     }
 }

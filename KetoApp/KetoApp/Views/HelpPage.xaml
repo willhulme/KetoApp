@@ -33,7 +33,7 @@
 
             <ContentView Grid.Row="4" Padding="10">
                 <StackLayout>
-                    <Button Text="000-000-000" FontSize="Large" BackgroundColor="Blue" TextColor="White"></Button>
+                    <Button Text="{Binding Model.Num1}" x:Name="Num1" FontSize="Large" BackgroundColor="Blue" TextColor="White"></Button>
                 </StackLayout>
             </ContentView>
 
@@ -43,7 +43,7 @@
 
             <ContentView Grid.Row="6" Padding="10">
                 <StackLayout>
-                    <Button Text="111-111-111" FontSize="Large" BackgroundColor="Blue" TextColor="White"></Button>
+                    <Button Text="{Binding Model.Num2}" x:Name="Num2" FontSize="Large" BackgroundColor="Blue" TextColor="White"></Button>
                 </StackLayout>
             </ContentView>
 

@@ -9,6 +9,8 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
             <ContentView Grid.Row="0" Padding="10">
@@ -31,8 +33,16 @@
                 <Label Text="If you are getting worse, seek medical advice urgently (tell them you may have DKA)." TextColor="Red" XAlign="Center" FontSize="Large" />
             </ContentView>
 
-            <ContentView Grid.Row="5" Padding="10">
+            <ContentView Grid.Row="5" Grid.Column="0" Padding="20">
+                <Button Text="Remind Me" FontSize="Large" BackgroundColor="Blue" TextColor="White" Clicked="YesTapped"></Button>
+            </ContentView>
+
+            <ContentView Grid.Row="5" Grid.Column="1" Padding="20">
                 <Button Text="OK" FontSize="Large" BackgroundColor="Blue" TextColor="White" Clicked="OKTapped"></Button>
+            </ContentView>
+            
+            <ContentView Grid.Row="6" Padding="10">
+                <Button Text="I am getting worse" FontSize="Large" BackgroundColor="Red" TextColor="White" Clicked="WorseTapped"></Button>
             </ContentView>
 
         </Grid>

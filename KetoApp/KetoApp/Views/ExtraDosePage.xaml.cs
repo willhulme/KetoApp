@@ -20,5 +20,13 @@ namespace KetoApp.Pages
         {
             await Navigation.PopToRootAsync();
         }
+        public async void YesTapped(object sender, EventArgs args)
+        {
+            //await Navigation.PopToRootAsync();
+        }
+        public async void WorseTapped(object sender, EventArgs args)
+        {
+            await Navigation.PushAsync(new HelpPage());
+        }
     }
 }

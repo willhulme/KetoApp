@@ -22,6 +22,5 @@ namespace KetoApp.Models
                 _mmolString = value;
             }
         }
-
     }
 }

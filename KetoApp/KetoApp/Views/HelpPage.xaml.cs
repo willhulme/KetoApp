@@ -10,6 +10,11 @@ namespace KetoApp.Pages
 {
     public partial class HelpPage : ContentPage
     {
+        protected override void OnAppearing()
+        {
+            Num1.Text = "01382 632293";
+            Num2.Text = "01382 633909";
+        }
         public HelpPage()
         {
             InitializeComponent();
