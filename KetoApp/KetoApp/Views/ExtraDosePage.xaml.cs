@@ -20,8 +20,9 @@ namespace KetoApp.Pages
         {
             await Navigation.PopToRootAsync();
         }
-        public async void YesTapped(object sender, EventArgs args)
+        public async void RemindTapped(object sender, EventArgs args)
         {
+            //Dependency Service goes here
             //await Navigation.PopToRootAsync();
         }
         public async void WorseTapped(object sender, EventArgs args)

@@ -17,7 +17,7 @@ namespace KetoApp.ViewModels
         {
             Model = new Models.TaskModel()
             {
-                mmolString = "0.00"
+                mmolString = ""
             };
         }
         public Command mmolEntryCommand {

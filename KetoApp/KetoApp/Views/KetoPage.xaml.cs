@@ -26,9 +26,7 @@ namespace KetoApp.Pages
         }
         public async void NoTapped(object sender, EventArgs args)
         {
-            ketones = false;
-            start = false;
-            await Navigation.PushAsync(new BloodPage(ketones, start));
+            await Navigation.PushAsync(new CheckPage());
         }
     }
 }

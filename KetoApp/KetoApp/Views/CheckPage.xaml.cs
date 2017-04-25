@@ -21,5 +21,10 @@ namespace KetoApp.Pages
         {
             await Navigation.PushAsync(new StockPage());
         }
+        public async void RemindTapped(object sender, EventArgs args)
+        {
+            //Dependency Service goes here
+            //await Navigation.PopToRootAsync();
+        }
     }
 }
