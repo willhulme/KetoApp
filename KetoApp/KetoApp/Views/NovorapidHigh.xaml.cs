@@ -16,11 +16,6 @@ namespace KetoApp.Pages
             this.Title = "KetoApp";
             this.BackgroundColor = Color.White;
         }
-
-        public async void YesTapped(object sender, EventArgs args)
-        {
-            //await Navigation.PushAsync(new ExtraDosePage());
-        }
         public async void OKTapped(object sender, EventArgs args)
         {
             await Navigation.PushAsync(new ExtraDosePage());

@@ -8,9 +8,9 @@ using Xamarin.Forms;
 
 namespace KetoApp.Pages
 {
-    public partial class NovorapidLow : ContentPage
+    public partial class CheckPage2 : ContentPage
     {
-        public NovorapidLow()
+        public CheckPage2()
         {
             InitializeComponent();
             this.Title = "KetoApp";
@@ -18,7 +18,11 @@ namespace KetoApp.Pages
         }
         public async void OKTapped(object sender, EventArgs args)
         {
-            await Navigation.PushAsync(new CheckPage());
+            await Navigation.PushAsync(new StockPage());
+        }
+        public async void WorseTapped(object sender, EventArgs args)
+        {
+            await Navigation.PushAsync(new HelpPage());
         }
     }
 }

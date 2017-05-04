@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage x:Class="KetoApp.Pages.HelpPage" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
     <ScrollView Orientation="Vertical">
-        
-        <Grid VerticalOptions="Center" HorizontalOptions="Center">
+
+        <Grid RowSpacing="20" VerticalOptions="Center" Padding="20">
 
             <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="50"/>
@@ -19,31 +20,37 @@
 
             <ContentView Grid.Row="1" Padding="10">
                 <StackLayout>
-                    <Button Text="CALL 999" FontSize="Large" BackgroundColor="Red" TextColor="White"></Button>
+                    <Button BorderWidth="5" BorderColor="Black" Text="CALL 999" FontSize="Large" BackgroundColor="Red" TextColor="White"></Button>
                 </StackLayout>
             </ContentView>
 
-            <ContentView Grid.Row="2">
-                <Label Text="Working Hours (9AM - 5PM)" BackgroundColor="Black" TextColor="White" XAlign="Center" FontSize="Large" />
+            <ContentView Grid.Row="2" Padding="10">
+                <StackLayout>
+                    <Button BorderWidth="5" BorderColor="Black" Text="I am OK" FontSize="Large" BackgroundColor="Blue" TextColor="White" Clicked="BackTapped"></Button>
+                </StackLayout>
             </ContentView>
 
             <ContentView Grid.Row="3">
+                <Label Text="Working Hours (9AM - 5PM)" BackgroundColor="Black" TextColor="White" XAlign="Center" FontSize="Large" />
+            </ContentView>
+
+            <ContentView Grid.Row="4">
                 <Label Text="My Diabetes Team" TextColor="Black" XAlign="Center" FontSize="Large" />
             </ContentView>
 
-            <ContentView Grid.Row="4" Padding="10">
+            <ContentView Grid.Row="5" Padding="10">
                 <StackLayout>
-                    <Button Text="{Binding Model.Num1}" x:Name="Num1" FontSize="Large" BackgroundColor="Blue" TextColor="White"></Button>
+                    <Button BorderWidth="5" BorderColor="Black" x:Name="Num1" FontSize="Large" BackgroundColor="Blue" TextColor="White"></Button>
                 </StackLayout>
             </ContentView>
 
-            <ContentView Grid.Row="5">
+            <ContentView Grid.Row="6">
                 <Label Text="Local Hospital Ward" TextColor="Black" XAlign="Center" FontSize="Large" />
             </ContentView>
 
-            <ContentView Grid.Row="6" Padding="10">
+            <ContentView Grid.Row="7" Padding="10">
                 <StackLayout>
-                    <Button Text="{Binding Model.Num2}" x:Name="Num2" FontSize="Large" BackgroundColor="Blue" TextColor="White"></Button>
+                    <Button BorderWidth="5" BorderColor="Black" x:Name="Num2" FontSize="Large" BackgroundColor="Blue" TextColor="White"></Button>
                 </StackLayout>
             </ContentView>
 

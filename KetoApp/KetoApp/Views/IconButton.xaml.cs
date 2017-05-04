@@ -26,7 +26,5 @@ namespace KetoApp
             get { return MainLabel.Text; }
             set { MainLabel.Text = value; }
         }
-
-
     }
 }

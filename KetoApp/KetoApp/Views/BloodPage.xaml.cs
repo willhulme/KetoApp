@@ -11,46 +11,44 @@ namespace KetoApp.Pages
     public partial class BloodPage : ContentPage
     {
         private bool KetoFlag;
-        private bool StartFlag;
-        public BloodPage(bool ketones, bool start)
+        public BloodPage(bool ketones)
         {
             InitializeComponent();
             BindingContext = new ViewModels.Entries();
             this.Title = "KetoApp";
             this.BackgroundColor = Color.White;
             KetoFlag = ketones;
-            StartFlag = start;
         }
 
         public async void NextTapped(object sender, EventArgs args)
         {
-            var mmol = mmolString.Text;
-            Decimal mmolDec = Convert.ToDecimal(mmol);
-            if (mmolDec >= 12 & StartFlag)
+            if (!string.IsNullOrWhiteSpace(mmolString.Text))
             {
-                KetoFlag = false;
-                StartFlag = false;
-                await Navigation.PushAsync(new HighBloodPage());
+                Decimal mmol = Convert.ToDecimal(mmolString.Text);
+                if (mmol < 12 & !KetoFlag)
+                {
+                    KetoFlag = false;
+                    await Navigation.PushAsync(new HypoPage());
+                }
+                else if (mmol < 12 & KetoFlag)
+                {
+                    KetoFlag = false;
+                    await Navigation.PushAsync(new StarvePage());
+                }
+                else if (mmol >= 12 & KetoFlag)
+                {
+                    KetoFlag = false;
+                    await Navigation.PushAsync(new ExtraDosePage());
+                }
+                else if (mmol >= 12 & !KetoFlag)
+                {
+                    KetoFlag = false;
+                    await Navigation.PushAsync(new HighBloodPage());
+                }
             }
-            else if (mmolDec < 12 & !KetoFlag)
+            else
             {
-                KetoFlag = false;
-                await Navigation.PushAsync(new HypoPage());
-            }
-            else if (mmolDec < 12 & KetoFlag)
-            {
-                KetoFlag = false;
-                await Navigation.PushAsync(new StarvePage());
-            }
-            else if(mmolDec >= 12 & KetoFlag)
-            {
-                KetoFlag = false;
-                await Navigation.PushAsync(new NovorapidHigh());
-            }
-            else if (mmolDec >= 12 & !KetoFlag)
-            {
-                KetoFlag = false;
-                await Navigation.PushAsync(new NovorapidLow());
+                await Navigation.PopToRootAsync();
             }
         }
     }

@@ -18,16 +18,7 @@ namespace KetoApp.Pages
         }
         public async void OKTapped(object sender, EventArgs args)
         {
-            await Navigation.PopToRootAsync();
-        }
-        public async void RemindTapped(object sender, EventArgs args)
-        {
-            //Dependency Service goes here
-            //await Navigation.PopToRootAsync();
-        }
-        public async void WorseTapped(object sender, EventArgs args)
-        {
-            await Navigation.PushAsync(new HelpPage());
+            await Navigation.PushAsync(new CheckPage2());
         }
     }
 }

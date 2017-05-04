@@ -11,20 +11,19 @@ namespace KetoApp
     {
         public App()
         {
-            // The root page of your application
             MainPage = new NavigationPage(new MainPage());
         }
         protected override void OnStart()
         {
-
+            MainPage = new NavigationPage(new MainPage());
         }
         protected override void OnSleep()
         {
-            // Handle when your app sleeps
+            MainPage = new NavigationPage(new MainPage());
         }
         protected override void OnResume()
         {
-            // Handle when your app resumes
+            MainPage = new NavigationPage(new MainPage());
         }
     }
 }

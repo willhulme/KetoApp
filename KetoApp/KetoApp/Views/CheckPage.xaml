@@ -1,28 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage x:Class="KetoApp.Pages.CheckPage" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:Controls="clr-namespace:KetoApp;assembly=KetoApp">
     <ScrollView Orientation="Vertical">
-        
-        <Grid VerticalOptions="Center">
+
+        <Grid RowSpacing="20" VerticalOptions="Center" Padding="20">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
-            <ContentView Grid.Row="0" Grid.ColumnSpan="2" Padding="10">
+            <ContentView Grid.Row="0" Padding="10">
                 <Label Text="Check your blood glucose at least 4 times a day, and ketones at least twice a day, until you are sure things have settled." TextColor="Black" XAlign="Center" FontSize="Large" />
             </ContentView>
 
-            <ContentView Grid.Row="1" Grid.ColumnSpan="2" Padding="10">
+            <ContentView Grid.Row="1" Padding="10">
                 <Label Text="If urine ketones are +++ or more, or blood ketones over 3 mmol/L, recheck glucose and ketones within 2 hours." TextColor="Black" XAlign="Center" FontSize="Large" />
             </ContentView>
 
-            <ContentView Grid.Row="2" Grid.Column="0" Padding="10">
-                <Button Text="Remind Me" FontSize="Large" BackgroundColor="Blue" TextColor="White" Clicked="RemindTapped"></Button>
-            </ContentView>
-
-            <ContentView Grid.Row="2" Grid.Column="1" Padding="10">
-                <Button Text="OK" FontSize="Large" BackgroundColor="Blue" TextColor="White" Clicked="OKTapped"></Button>
+            <ContentView Grid.Row="2" Padding="10">
+                <Button BorderWidth="5" BorderColor="Black" Text="OK" FontSize="Large" BackgroundColor="Blue" TextColor="White" Clicked="OKTapped"></Button>
             </ContentView>
 
         </Grid>

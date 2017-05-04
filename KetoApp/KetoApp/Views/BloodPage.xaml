@@ -1,21 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage x:Class="KetoApp.Pages.BloodPage" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             xmlns:ViewModels="clr-namespace:KetoApp.ViewModels;assembly=KetoApp">
-    
+<ContentPage x:Class="KetoApp.Pages.BloodPage" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:ViewModels="clr-namespace:KetoApp.ViewModels;assembly=KetoApp">
+
     <ContentPage.BindingContext>
         <ViewModels:Entries/>
     </ContentPage.BindingContext>
-    
+
     <ScrollView Orientation="Vertical">
-        <Grid>
+        <Grid RowSpacing="20" VerticalOptions="Center" Padding="20">
 
             <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="100"/>
-                <RowDefinition Height="100"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
@@ -24,15 +19,15 @@
             </ContentView>
 
             <ContentView Grid.Row="1" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center">
-                <Entry Text="{Binding Model.mmolString}" x:Name="mmolString" Placeholder="0.00" TextColor="Black" FontSize="26" Keyboard="Numeric" Grid.Row="1" Grid.Column="0"/>
+                <Entry Text="{Binding Model.mmolString}" x:Name="mmolString" Placeholder="0.0" TextColor="Black" BackgroundColor="LightGray" FontSize="36" Keyboard="Numeric" Grid.Row="1" Grid.Column="0"/>
             </ContentView>
 
             <ContentView Grid.Row="1" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center">
-                <Label Text="mmol/L" TextColor="Black" XAlign="Center" FontSize="26" Grid.Row="1" Grid.Column="1"/>
+                <Label Text="mmol/L" TextColor="Black" XAlign="Center" FontSize="Large" Grid.Row="1" Grid.Column="1"/>
             </ContentView>
 
             <ContentView Grid.Row="2" Grid.ColumnSpan="2" Padding="20">
-                <Button Text="Next" FontSize="Large" BackgroundColor="Red" TextColor="White" Clicked="NextTapped" Command="{Binding mmolEntryCommand}"></Button>
+                <Button BorderWidth="5" BorderColor="Black" Text="Next" FontSize="Large" BackgroundColor="Red" TextColor="White" Command="{Binding mmolEntryCommand}" Clicked="NextTapped"></Button>
             </ContentView>
 
         </Grid>

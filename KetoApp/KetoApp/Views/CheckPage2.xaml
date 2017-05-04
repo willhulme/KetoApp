@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="KetoApp.Pages.CheckPage2" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:Controls="clr-namespace:KetoApp;assembly=KetoApp">
+    <ScrollView Orientation="Vertical">
+
+        <Grid RowSpacing="20" VerticalOptions="Center" Padding="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <ContentView Grid.Row="0" Padding="10">
+                <Label Text="If your blood glucose is still high 4 hours later, repeat the extra dose." TextColor="Black" XAlign="Center" FontSize="Large" />
+            </ContentView>
+
+            <ContentView Grid.Row="1" Padding="10">
+                <Label Text="Keep monitoring blood glucose and ketones - you can repeat the extra dose of insulin every 4 hours as necessary." TextColor="Black" XAlign="Center" FontSize="Large" />
+            </ContentView>
+
+            <ContentView Grid.Row="2" Padding="10">
+                <Label Text="Contact your diabetes team if things have not settled within 12 hours." TextColor="Black" XAlign="Center" FontSize="Large" />
+            </ContentView>
+
+            <ContentView Grid.Row="4" Padding="10">
+                <Label Text="If you are getting worse, seek medical advice urgently and tell them you may have DKA." TextColor="Red" XAlign="Center" FontSize="Large" />
+            </ContentView>
+
+            <ContentView Grid.Row="5" Padding="10">
+                <Button BorderWidth="5" BorderColor="Black" Text="OK" FontSize="Large" BackgroundColor="Blue" TextColor="White" Clicked="OKTapped"></Button>
+            </ContentView>
+
+            <ContentView Grid.Row="6" Padding="10">
+                <Button BorderWidth="5" BorderColor="Black" Text="I am getting worse" FontSize="Large" BackgroundColor="Red" TextColor="White" Clicked="WorseTapped"></Button>
+            </ContentView>
+
+        </Grid>
+    </ScrollView>
+</ContentPage>

@@ -2,8 +2,9 @@
 <ContentPage x:Class="KetoApp.Pages.CreditsPage" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:Controls="clr-namespace:KetoApp;assembly=KetoApp">
     <ScrollView Orientation="Vertical">
 
-        <Grid>
+        <Grid RowSpacing="20" VerticalOptions="Center" Padding="20">
             <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
@@ -27,8 +28,12 @@
                 <Label Text="Icon(s) made by Freepik from www.flaticon.com" TextColor="Black" XAlign="Center" FontSize="Large" />
             </ContentView>
 
-            <ContentView Grid.Row="4" Padding="10" VerticalOptions="Center">
-                <Button Text="OK" FontSize="Large" BackgroundColor="Blue" TextColor="White" Clicked="OKTapped"></Button>
+            <ContentView Grid.Row="4" VerticalOptions="Center">
+                <Label Text="© NHS Highland 2017" TextColor="Black" XAlign="Center" FontSize="Large" />
+            </ContentView>
+
+            <ContentView Grid.Row="5" Padding="10" VerticalOptions="Center">
+                <Button BorderWidth="5" BorderColor="Black" Text="Back" FontSize="Large" BackgroundColor="Blue" TextColor="White" Clicked="BackTapped"></Button>
             </ContentView>
 
         </Grid>

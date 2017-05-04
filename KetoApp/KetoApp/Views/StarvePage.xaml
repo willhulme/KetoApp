@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage x:Class="KetoApp.Pages.StarvePage" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:Controls="clr-namespace:KetoApp;assembly=KetoApp">
     <ScrollView Orientation="Vertical">
-        
-        <Grid VerticalOptions="Center">
+
+        <Grid RowSpacing="20" VerticalOptions="Center" Padding="20">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
             <ContentView Grid.Row="0" Padding="10">
-                <Label Text="This may be starvation ketosis. Be sure you get enough carbohydrate to eat or drink. If you are feeling queasy, take this as sips of a sugary drink. Aim to drink a glassful every 1-2 hours - and take plenty sugar free fluid too." TextColor="Black" XAlign="Center" FontSize="Large" />
+                <Label Text="This may be starvation ketosis. Be sure you get enough carbohydrate to eat or drink. If you are feeling queasy, take this as sips of a sugary drink. Aim to drink a glassful every 1-2 hours - and take plenty sugar-free fluid too." TextColor="Black" XAlign="Center" FontSize="Large" />
             </ContentView>
 
             <ContentView Grid.Row="1" Padding="10">
-                <Button Text="OK" FontSize="Large" BackgroundColor="Blue" TextColor="White" Clicked="OKTapped"></Button>
+                <Button BorderWidth="5" BorderColor="Black" Text="OK" FontSize="Large" BackgroundColor="Blue" TextColor="White" Clicked="OKTapped"></Button>
             </ContentView>
 
         </Grid>

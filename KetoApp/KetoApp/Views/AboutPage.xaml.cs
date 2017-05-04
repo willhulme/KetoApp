@@ -11,14 +11,6 @@ namespace KetoApp.Pages
 {
     public partial class AboutPage : ContentPage
     {
-        protected override void OnAppearing()
-        {
-            DOB.Date = new DateTime(1995, 02, 03);
-            Pump.IsToggled = false;
-            TDD.Text = "50";
-            Num1.Text = "01382 632293";
-            Num2.Text = "01382 633909";
-        }
         public AboutPage()
         {
             InitializeComponent();
@@ -26,9 +18,15 @@ namespace KetoApp.Pages
             this.Title = "KetoApp";
             this.BackgroundColor = Color.White;
         }
-        private void Pump_Toggled(object sender, ToggledEventArgs e)
+        public async void NextTapped(object sender, EventArgs args)
         {
-
+            string Name = xName.Text;
+            DateTime DOB = xDOB.Date;
+            bool Pump = Convert.ToBoolean(xPump.IsToggled);
+            int TDD = Convert.ToInt32(xTDD.Text);
+            string Num1 = xNum1.Text;
+            string Num2 = xNum2.Text;
+            await Navigation.PopToRootAsync();
         }
     }
 }

@@ -16,15 +16,9 @@ namespace KetoApp.Pages
             this.Title = "KetoApp";
             this.BackgroundColor = Color.White;
         }
-
         public async void OKTapped(object sender, EventArgs args)
         {
             await Navigation.PushAsync(new StockPage());
-        }
-        public async void RemindTapped(object sender, EventArgs args)
-        {
-            //Dependency Service goes here
-            //await Navigation.PopToRootAsync();
         }
     }
 }

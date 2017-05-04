@@ -11,7 +11,6 @@ namespace KetoApp.Pages
     public partial class KetoPage : ContentPage
     {
         private bool ketones;
-        private bool start;
         public KetoPage()
         {
             InitializeComponent();
@@ -21,8 +20,7 @@ namespace KetoApp.Pages
         public async void YesTapped(object sender, EventArgs args)
         {
             ketones = true;
-            start = false;
-            await Navigation.PushAsync(new BloodPage(ketones, start));
+            await Navigation.PushAsync(new BloodPage(ketones));
         }
         public async void NoTapped(object sender, EventArgs args)
         {

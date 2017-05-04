@@ -23,7 +23,7 @@ namespace KetoApp.Pages
         }
         public async void NoTapped(object sender, EventArgs args)
         {
-            await Navigation.PopToRootAsync();
+            await Navigation.PushAsync(new KetoPage());
         }
     }
 }

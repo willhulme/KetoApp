@@ -21,5 +21,9 @@ namespace KetoApp.Pages
             this.Title = "KetoApp";
             this.BackgroundColor = Color.White;
         }
+        public async void BackTapped(object sender, EventArgs args)
+        {
+            await Navigation.PopToRootAsync();
+        }
     }
 }

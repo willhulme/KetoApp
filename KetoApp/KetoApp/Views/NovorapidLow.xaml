@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage x:Class="KetoApp.Pages.NovorapidLow" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:Controls="clr-namespace:KetoApp;assembly=KetoApp">
     <ScrollView Orientation="Vertical">
-        
-        <Grid VerticalOptions="Center">
+
+        <Grid RowSpacing="20" VerticalOptions="Center" Padding="20">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
@@ -19,13 +19,13 @@
             </ContentView>
 
             <ContentView Grid.Row="2" Grid.Column="0" Padding="20">
-                <Button Text="Yes" FontSize="Large" BackgroundColor="Blue" TextColor="White" Clicked="YesTapped"></Button>
+                <Button BorderWidth="5" BorderColor="Black" Text="Yes" FontSize="Large" BackgroundColor="Blue" TextColor="White" Clicked="YesTapped"></Button>
             </ContentView>
 
             <ContentView Grid.Row="2" Grid.Column="1" Padding="20">
-                <Button Text="OK" FontSize="Large" BackgroundColor="Blue" TextColor="White" Clicked="OKTapped"></Button>
+                <Button BorderWidth="5" BorderColor="Black" Text="Continue" FontSize="Large" BackgroundColor="Blue" TextColor="White" Clicked="OKTapped"></Button>
             </ContentView>
-            
+
         </Grid>
     </ScrollView>
 </ContentPage>

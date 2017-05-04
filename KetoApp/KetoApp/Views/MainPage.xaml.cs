@@ -11,7 +11,6 @@ namespace KetoApp
     public partial class MainPage : ContentPage
     {
         private bool ketones;
-        private bool start;
         public MainPage()
         {
             InitializeComponent();
@@ -19,15 +18,17 @@ namespace KetoApp
             this.BackgroundColor = Color.White;
             BindingContext = new ViewModels.Profile();
         }
+        protected override void OnAppearing()
+        {
+            ketones = false;
+        }
         public async void UnwellTapped(object sender, EventArgs args)
         {
             await Navigation.PushAsync(new UnwellPage());
         }
         public async void BloodTapped(object sender, EventArgs args)
         {
-            ketones = false;
-            start = true;
-            await Navigation.PushAsync(new BloodPage(ketones, start));
+            await Navigation.PushAsync(new BloodPage(ketones));
         }
         public async void AboutTapped(object sender, EventArgs args)
         {

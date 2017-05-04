@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentView x:Class="KetoApp.IconButton" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
-    <StackLayout Orientation="Vertical">
-        <Image x:Name="MainIcon" Source="{Binding Icon}" />
-        <Label x:Name="MainLabel" Text="{Binding Label}" TextColor="Black" FontSize="Large" XAlign="Center"/>
-    </StackLayout>
-</ContentView>

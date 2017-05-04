@@ -2,34 +2,34 @@
 <ContentPage x:Class="KetoApp.MainPage" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:Controls="clr-namespace:KetoApp;assembly=KetoApp">
 
     <ScrollView Orientation="Vertical">
-        <Grid>
+        <Grid RowSpacing="0" VerticalOptions="Center">
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="75"/>
-                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="100"/>
                 <RowDefinition Height="200"/>
                 <RowDefinition Height="200"/>
                 <RowDefinition Height="200"/>
-                <RowDefinition Height="50"/>
+                <RowDefinition Height="75"/>
             </Grid.RowDefinitions>
 
             <ContentView Grid.Row="0" Grid.ColumnSpan="2">
                 <Label Text="This guidance does not replace advice from your diabetes team." TextColor="Black" XAlign="Center" FontSize="Large" />
             </ContentView>
 
-            <ContentView Grid.Row="1" Grid.ColumnSpan="2" Padding="10">
+            <ContentView Grid.Row="1" Padding="10" Grid.ColumnSpan="2">
                 <Image Source="ketoappbanner.png" />
             </ContentView>
 
-            <Controls:IconButton Grid.Row="2" Grid.Column="0" Icon="sick.png" Label="I Feel Unwell" Padding="10">
+            <Controls:IconButton Grid.Row="2" Grid.Column="0" Icon="happy.png" Label="Start Here" Padding="10">
                 <Controls:IconButton.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="UnwellTapped" />
+                    <TapGestureRecognizer Tapped="BloodTapped" />
                 </Controls:IconButton.GestureRecognizers>
             </Controls:IconButton>
 
-            <Controls:IconButton Grid.Row="2" Grid.Column="1" Icon="happy.png" Label="Blood Glucose" Padding="10">
+            <Controls:IconButton Grid.Row="2" Grid.Column="1" Icon="sick.png" Label="I Feel Unwell" Padding="10">
                 <Controls:IconButton.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="BloodTapped" />
+                    <TapGestureRecognizer Tapped="UnwellTapped" />
                 </Controls:IconButton.GestureRecognizers>
             </Controls:IconButton>
 
@@ -57,11 +57,12 @@
                 </Controls:IconButton.GestureRecognizers>
             </Controls:IconButton>
 
-            <ContentView Grid.Row="5" Grid.ColumnSpan="2" VerticalOptions="Center">
-                <Label Text="© NHS Highland 2017" TextColor="Black" XAlign="Center" FontSize="Large" />
+            <ContentView Grid.Row="5" Grid.ColumnSpan="2">
+                <Label Text="© Will Hulme" TextColor="Black" XAlign="Center" FontSize="Large" VerticalOptions="Center"/>
             </ContentView>
-
+            
         </Grid>
+
     </ScrollView>
 
 </ContentPage>

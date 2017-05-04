@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -6,6 +7,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+
 
 namespace KetoApp.ViewModels
 {
@@ -17,6 +19,7 @@ namespace KetoApp.ViewModels
         {
             Model = new Models.AboutModel()
             {
+                Name = "Will",
                 DOB = new DateTime(1995, 02, 03),
                 Pump = false,
                 TDD = 50,
@@ -30,6 +33,7 @@ namespace KetoApp.ViewModels
             {
                 return new Command(() =>
                 {
+                    Model.Name = Model.Name;
                     Model.DOB = Model.DOB;
                     Model.Pump = Model.Pump;
                     Model.TDD = Model.TDD;

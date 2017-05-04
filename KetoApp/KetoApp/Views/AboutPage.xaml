@@ -6,14 +6,16 @@
     </ContentPage.BindingContext>
 
     <ScrollView Orientation="Vertical">
-        <Grid HorizontalOptions="Center" VerticalOptions="Center" Padding="10">
+        <Grid RowSpacing="20" VerticalOptions="Center" Padding="20">
 
             <Grid.RowDefinitions>
-                <RowDefinition Height="100"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
-                <RowDefinition Height="50"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
@@ -23,51 +25,63 @@
             </ContentView>
 
             <ContentView Grid.Row="1" Grid.Column="0"  VerticalOptions="Center">
+                <Label Text="Profile Name:" TextColor="Black" FontSize="Large"/>
+            </ContentView>
+
+            <ContentView Grid.Row="1" Grid.Column="1" VerticalOptions="Center">
+                <Entry Text="{Binding Model.Name}" Placeholder="Your Name" x:Name="xName" TextColor="Black" BackgroundColor="LightGray" FontSize="Large" Keyboard="Text" Grid.Row="1" Grid.Column="0"/>
+            </ContentView>
+
+            <ContentView Grid.Row="2" Grid.Column="0"  VerticalOptions="Center">
                 <Label Text="Date of Birth:" TextColor="Black" FontSize="Large"/>
             </ContentView>
 
-            <ContentView Grid.Row="1" Grid.Column="1"  VerticalOptions="Center">
+            <ContentView Grid.Row="2" Grid.Column="1"  VerticalOptions="Center">
                 <StackLayout>
-                    <DatePicker VerticalOptions="CenterAndExpand" Date="{x:Static sys:DateTime.Now}" x:Name="DOB" TextColor="Black">
+                    <DatePicker VerticalOptions="CenterAndExpand" Date="{Binding Model.DOB}" x:Name="xDOB" BackgroundColor="LightGray" TextColor="Black">
                         <DatePicker.Format>dd/MM/yyyy</DatePicker.Format>
                     </DatePicker>
                 </StackLayout>
             </ContentView>
 
-            <ContentView Grid.Row="2" Grid.Column="0"  VerticalOptions="Center">
-                <Label Text="Insulin Pump" TextColor="Black" FontSize="Large"/>
-            </ContentView>
-
-            <ContentView Grid.Row="2" Grid.Column="1" HorizontalOptions="Center">
-                <Switch IsToggled="False" x:Name="Pump" Toggled="Pump_Toggled"/>
-            </ContentView>
-
             <ContentView Grid.Row="3" Grid.Column="0"  VerticalOptions="Center">
+                <Label Text="Insulin Pump:" TextColor="Black" FontSize="Large"/>
+            </ContentView>
+
+            <ContentView Grid.Row="3" Grid.Column="1" HorizontalOptions="Center">
+                <Switch  IsToggled="{Binding Model.Pump}" x:Name="xPump"/>
+            </ContentView>
+
+            <ContentView Grid.Row="4" Grid.Column="0"  VerticalOptions="Center">
                 <Label Text="My Total Daily Dose (TDD):" TextColor="Black" FontSize="Large"/>
             </ContentView>
 
-            <ContentView Grid.Row="3" Grid.Column="1" VerticalOptions="Center">
-                <Entry Text="{Binding Model.TDD}" x:Name="TDD" Placeholder="0" TextColor="Black" FontSize="Large" Keyboard="Numeric" Grid.Row="1" Grid.Column="0"/>
+            <ContentView Grid.Row="4" Grid.Column="1" VerticalOptions="Center">
+                <Entry Text="{Binding Model.TDD}" Placeholder="00" x:Name="xTDD" TextColor="Black" FontSize="Large" BackgroundColor="LightGray" Keyboard="Numeric" Grid.Row="1" Grid.Column="0"/>
             </ContentView>
 
-            <ContentView Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" VerticalOptions="Center">
+            <ContentView Grid.Row="5" Grid.ColumnSpan="2" Padding="20">
+                <Button BorderWidth="5" BorderColor="Black" Text="Update" FontSize="Large" BackgroundColor="Blue" TextColor="White" Command="{Binding getProfile}" Clicked="NextTapped"></Button>
+            </ContentView>
+
+            <ContentView Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" VerticalOptions="Center">
                 <Label Text="Important Phone Numbers" TextColor="White" BackgroundColor="Black" XAlign="Center" FontSize="Large"/>
             </ContentView>
 
-            <ContentView Grid.Row="5" Grid.Column="0"  VerticalOptions="Center">
+            <ContentView Grid.Row="7" Grid.Column="0"  VerticalOptions="Center">
                 <Label Text="My Diabetologist:" TextColor="Black" FontSize="Large"/>
             </ContentView>
 
-            <ContentView Grid.Row="5" Grid.Column="1" VerticalOptions="Center">
-                <Entry Text="{Binding Model.Num1}" x:Name="Num1" Placeholder="0" TextColor="Black" FontSize="Large" Keyboard="Numeric" Grid.Row="1" Grid.Column="0"/>
+            <ContentView Grid.Row="7" Grid.Column="1" VerticalOptions="Center">
+                <Entry  Text="{Binding Model.Num1}" Placeholder="01234567890" x:Name="xNum1" BackgroundColor="LightGray" TextColor="Black" FontSize="Large" Keyboard="Numeric" Grid.Row="1" Grid.Column="0"/>
             </ContentView>
 
-            <ContentView Grid.Row="6" Grid.Column="0"  VerticalOptions="Center">
+            <ContentView Grid.Row="8" Grid.Column="0"  VerticalOptions="Center">
                 <Label Text="Local Hospital Ward:" TextColor="Black" FontSize="Large"/>
             </ContentView>
 
-            <ContentView Grid.Row="6" Grid.Column="1" VerticalOptions="Center">
-                <Entry Text="{Binding Model.Num2}" x:Name="Num2" Placeholder="0" TextColor="Black" FontSize="Large" Keyboard="Numeric" Grid.Row="1" Grid.Column="0"/>
+            <ContentView Grid.Row="8" Grid.Column="1" VerticalOptions="Center">
+                <Entry Text="{Binding Model.Num2}" Placeholder="01234567890" x:Name="xNum2" BackgroundColor="LightGray" TextColor="Black" FontSize="Large" Keyboard="Numeric" Grid.Row="1" Grid.Column="0"/>
             </ContentView>
 
         </Grid>

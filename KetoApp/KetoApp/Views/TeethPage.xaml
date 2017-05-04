@@ -2,7 +2,7 @@
 <ContentPage x:Class="KetoApp.Pages.TeethPage" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:Controls="clr-namespace:KetoApp;assembly=KetoApp">
     <ScrollView Orientation="Vertical">
 
-        <Grid VerticalOptions="Center">
+        <Grid RowSpacing="20" VerticalOptions="Center" Padding="20">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
@@ -43,7 +43,7 @@
             </ContentView>
 
             <ContentView Grid.Row="7" Padding="10">
-                <Button Text="OK" FontSize="Large" BackgroundColor="Blue" TextColor="White" Clicked="OKTapped"></Button>
+                <Button BorderWidth="5" BorderColor="Black" Text="OK" FontSize="Large" BackgroundColor="Blue" TextColor="White" Clicked="OKTapped"></Button>
             </ContentView>
 
         </Grid>

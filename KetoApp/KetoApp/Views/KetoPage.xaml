@@ -1,32 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage x:Class="KetoApp.Pages.KetoPage" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:Controls="clr-namespace:KetoApp;assembly=KetoApp">
     <ScrollView Orientation="Vertical">
-        <Grid VerticalOptions="Center">
+        <Grid RowSpacing="20" VerticalOptions="Center" Padding="20">
 
             <Grid.RowDefinitions>
-                <RowDefinition Height="75"/>
                 <RowDefinition Height="Auto"/>
+                <RowDefinition Height="200"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
             <ContentView Grid.Row="0" Grid.ColumnSpan="2">
-                <Label Text="Check for Ketones." TextColor="Black" XAlign="Center" FontSize="Large" />
+                <Label Text="Check for Ketones" TextColor="Black" XAlign="Center" FontSize="Large" />
             </ContentView>
 
-            <ContentView Grid.Row="1" BackgroundColor="Blue" Grid.ColumnSpan="2" Padding="10">
+            <ContentView Grid.Row="1" BackgroundColor="Blue" Grid.ColumnSpan="2" Padding="10" VerticalOptions="Center">
                 <StackLayout>
                     <Label Text="Are ketones positive?" TextColor="White" XAlign="Center" FontSize="Large" />
                     <Label Text="Urine: more than a trace, or" TextColor="White" FontSize="Medium"/>
                     <Label Text="Blood ketones: more than 1 mmol/L?" TextColor="White" FontSize="Medium"/>
                 </StackLayout>
-                </ContentView>
+            </ContentView>
 
             <ContentView Grid.Row="2" Grid.Column="0" Padding="20">
-                <Button Text="Yes" FontSize="Large" BackgroundColor="Red" TextColor="White" Clicked="YesTapped"></Button>
+                <Button BorderWidth="5" BorderColor="Black" Text="Yes" FontSize="Large" BackgroundColor="Red" TextColor="White" Clicked="YesTapped"></Button>
             </ContentView>
 
             <ContentView Grid.Row="2" Grid.Column="1" Padding="20">
-                <Button Text="No" FontSize="Large" BackgroundColor="Blue" TextColor="White" Clicked="NoTapped"></Button>
+                <Button BorderWidth="5" BorderColor="Black" Text="No" FontSize="Large" BackgroundColor="Blue" TextColor="White" Clicked="NoTapped"></Button>
             </ContentView>
 
         </Grid>
